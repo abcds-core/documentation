@@ -1,0 +1,17 @@
+{
+  "index.qmd": {
+    "index.html": "3e8d9cdd"
+  },
+  "intro.qmd": {
+    "intro.html": "78b74812"
+  },
+  "summary.qmd": {
+    "summary.html": "8256718e"
+  },
+  "references.qmd": {
+    "references.html": "6d20c35d"
+  },
+  "clinical-core.qmd": {
+    "clinical-core.html": "dcdb3a27"
+  }
+}

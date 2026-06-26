@@ -1,0 +1,25 @@
+project:
+  type: book
+
+book:
+  title: "Documentation"
+  author: "Brian C. Helsel"
+  date: "6/26/2026"
+  chapters:
+    - index.qmd
+    - clinical-core.qmd
+    - summary.qmd
+    - references.qmd
+
+bibliography: references.bib
+
+format:
+  html:
+    theme:
+      - lumen
+      - custom.scss
+  pdf:
+    documentclass: scrreprt
+
+
+
