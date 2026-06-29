@@ -39,3 +39,47 @@ pre.sourceCode {
   background-color: #1e1e2e;
   border-radius: 6px;
 }
+
+
+/* Shared layout (required for all styles) */
+.faq-q,
+.faq-a {
+  display: flex;
+  gap: 0.75rem;
+  align-items: baseline;
+  margin-bottom: 0.5rem;
+}
+.faq-q p,
+.faq-a p {
+  margin: 0;
+}
+
+/* Style 1 — Filled circle */
+.faq-q::before { content: "Q"; }
+.faq-a::before { content: "A"; }
+
+.faq-q::before,
+.faq-a::before {
+  flex-shrink: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 1.5em;
+  height: 1.5em;
+  border-radius: 50%;
+  font-size: 0.75em;
+  font-weight: 700;
+  font-family: sans-serif;
+  line-height: 1;
+  margin-top: 0.1em;
+}
+.faq-q::before { background: #185FA5; color: #fff; }
+.faq-a::before { background: #0F6E56; color: #fff; }
+
+.faq img {
+  border: 2px solid #185FA5;
+  border-radius: 5px;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+}

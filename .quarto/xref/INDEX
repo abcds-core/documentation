@@ -13,5 +13,11 @@
   },
   "clinical-core.qmd": {
     "clinical-core.html": "dcdb3a27"
+  },
+  "faq.qmd": {
+    "faq.html": "a091c3e7"
+  },
+  "genomics.qmd": {
+    "genomics.html": "ba345149"
   }
 }

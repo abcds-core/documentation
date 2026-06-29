@@ -8,7 +8,8 @@ book:
   chapters:
     - index.qmd
     - clinical-core.qmd
-    - summary.qmd
+    - genomics.qmd
+    - faq.qmd
     - references.qmd
 
 bibliography: references.bib
@@ -20,6 +21,3 @@ format:
       - custom.scss
   pdf:
     documentclass: scrreprt
-
-
-

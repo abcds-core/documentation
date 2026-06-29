@@ -1,0 +1,123 @@
+---
+toc: true
+bibliography: references.bib
+csl: american-medical-association-brackets.csl
+---
+
+# Genomic Data 
+
+Last Revised: October 10, 2024  
+VERSION 1.0
+
+GENOMIC DATA (GENOME-WIDE SNP MICROARRAY)
+
+**Authors** Lam-Ha T. Dang<sup>1</sup>, M. Ilyas Kamboh<sup>2</sup>, Carlos Cruchaga<sup>3</sup>, and Joseph H. Lee<sup>1</sup>
+
+**Affiliations**
+
+1. Taub Institute for Research on Alzheimer’s Disease and the Aging Brain, G. H. Sergievsky Center, and Departments of Epidemiology and Neurology Columbia University Medical Center, New York, NY USA; 
+2. Department of Human Genetics, Graduate School of Public Health, University of Pittsburgh, Pittsburgh, PA, USA; 
+3. Department of Psychiatry, Washington University School of Medicine, St. Louis, MO, USA
+
+**Summary**. This dataset includes genome-wide microarray data for 373 adults with Down Syndrome (DS) and 43 sibling non-DS controls (total N=416) in the Alzheimer's Biomarkers Consortium — Down Syndrome (ABC-DS) study. This genomic data set includes data on study participants who were enrolled in the U01 part of the ABC-DS study as of 4/30/2022.
+
+## Genotyping
+
+Genotyping was performed at the Center for Applied Genomics at Children’s
+Hospital of Pennsylvania using the Illumina Infinium General Screening Array
+(GSA) Version 2, with added disease markers for all samples, except for 25
+participants for which Version 3 was used. In total, 759,993 and 654,027
+variants across the genome were genotyped on GSAv2 and GSAv3, respectively. The
+two versions of the genotyping microarray had 619,856 (~95%) overlapping
+variants. We have provided several subsets of the complete data set (see
+“Summary of the data files provided” for more details). Variants in these data
+were mapped to the GRCh37/hg19 assembly.
+
+## Trisomic Chromosome 21 
+
+Chromosome 21 was treated separately because traditional tools cannot be applied
+to trisomic chromosome 21. Trisomic variants were treated as copy number
+variants (CNV) and were called in using the cnvPartition CNV Analysis (v3.2.0)
+plug-in in GenomeStudio 2.0 with Genotyping module.[@illumina2020genomestudio;
+@illumina2020plugins] Allele specific genotypes were then exported using the CNV
+Region Report plug-in (v.2.1.2)[@illumina2020plugins]. In total, 9,785 and 8,446
+variants were genotyped on GSAv2 and GSAv3, respectively. As done commonly, the
+p-arm of Chr. 21 was dropped from analysis because it is known to be highly
+heterochromatic with numerous repeat sequences. In the current data, this
+characteristic resulted in high rate of variants called as disomic in among
+those karyotyped with DS and discrepancies between duplicates in this region.
+For these reasons, all variants genotyped on the p-arm should be excluded from
+analysis.
+
+## Genotype quality control 
+
+To maximize the flexibility of these data for all investigators, we aimed to
+minimize the likelihood of distributing erroneous data, while minimizing the
+quality control steps. For example, we included SNPs that did not achieve high
+genotyping rates, which would have been dropped in a standard analysis practice.
+Specifically, we checked for sex-mismatch cases by identifying cases where sex
+obtained from the analysis of X-chromosome SNPs using PLINK[@chang2015plink2]
+did not match the reported sex. These cases were re-confirmed with research
+coordinators to rule out potential data entry error, etc. Relationships (e.g.,
+siblings, monozygotic twins) among subjects were confirmed by pair-wise
+genome-wide estimates of proportion identity-by-descent (IBD) computed using the
+KING[@manichaikul2010relationship] software. Discrepant relationships were
+reviewed against available demographic and family data (when siblings are
+genotyped) to determine the most likely relationship consistent with the
+proportion of IBD or other scenarios (i.e., sample duplicates, duplicate
+enrollments across cohorts). Samples with unresolved or ambiguous identities
+arising from mismatched sex and discrepant relationships were excluded from the
+dataset. In duplicated samples, the samples with the lower genotyping call rate
+were dropped from the data set. In the end, data were provided for 416
+participants.
+
+## Imputation
+
+We are not providing imputed data and suggest the <a href="https://imputation.biodatacatalyst.nhlbi.nih.gov/">TOPMed Imputation
+Server</a> for genotype imputation.
+
+
+## Summary of the data files
+
+*Nomenclature Subject Identification (ID) Number*
+
+- For non-DS control siblings, the Individual ID (IID) of the DS-proband was used as the Family ID (FID)
+- For families consisting of multiple participants with DS, the lower valued IID was used as the FID
+- In data files related to Chromosome 21, participant IDs were formatted as follows: “FID_IID”
+
+*Trisomic Chromosome 21 genotypes*
+
+- **ABC-DS.LONI.Chr21.GRCh37.CNCounts.txt**: Copy number count at each genotyped position.
+- **ABC-DS.LONI.Chr21.GRCh37.Dosage.txt**: Dosage of the “A” allele (“A_Allele” column). Dosage can be 0, 1, 2, or 3 copies.
+- **ABC-DS.LONI.Chr21.GRCh37.Genotype.txt**: Genotype in ACGT coding
+
+Non-Chromosome 21 genotypes: These genotypes are provided in binary PLINK data
+files (i.e., bed/bim/fam files) with pedigree and sex information.
+
+PLINK files consisting of *all variants* genotyped (i.e., the union of GSAv2 and GSAv3 chips)
+
+- **ABC-DS.GRCh37.non-Chr21.LONI.allSNPs.bed**
+- **ABC-DS.GRCh37.non-Chr21.LONI.allSNPs.bim**
+- **ABC-DS.GRCh37.non-Chr21.LONI.allSNPs.fam**
+
+PLINK files consisting of *only overlapping* variants (i.e., the intersection) between GSAv2 and GSAv3 chips
+
+- **ABC-DS.GRCh37.non-Chr21.LONI.bed**
+- **ABC-DS.GRCh37.non-Chr21.LONI.bim**
+- **ABC-DS.GRCh37.non-Chr21.LONI.fam**
+
+PLINK files consisting of the *remaining non-overlapping* variants
+
+- **ABC-DS.GRCh37.non-Chr21.LONI.nonOverlappingVars.bed**
+- **ABC-DS.GRCh37.non-Chr21.LONI.nonOverlappingVars.bim**
+- **ABC-DS.GRCh37.non-Chr21.LONI.nonOverlappingVars.fam**
+
+
+**About the Authors**: This document was prepared by Lam-Ha T. Dang and Joseph
+H. Lee. For more information please contact <a href="mailto:JHL2@cumc.columbia.edu">Joseph H. Lee</a>
+and CC: <a href="mailto:ltd2108@cumc.columbia.edu">Lam-Ha T. Dang</a>.
+
+**Notice**: This document is presented by the author(s) as a service to ABC-DS data
+users. However, users should be aware that no formal review process has vetted
+this document and that ABC-DS cannot guarantee the accuracy or utility of this
+document
