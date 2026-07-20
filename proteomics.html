@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>2&nbsp; Summary – Documentation</title>
+<title>5&nbsp; Proteomics – Documentation</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -23,7 +23,26 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-</style>
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 
 <script src="site_libs/quarto-nav/quarto-nav.js"></script>
@@ -33,8 +52,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./references.html" rel="next">
-<link href="./clinical-core.html" rel="prev">
+<link href="./faq.html" rel="next">
+<link href="./p217.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
@@ -44,7 +63,7 @@ ul.task-list li input[type="checkbox"] {
 <link href="site_libs/quarto-html/quarto-syntax-highlighting-845c23b38eaddc0f92fda52bfe77a8c8.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-c903e5d4fda342dc3c7920c672a81c0f.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-1ef3e6d62a7b78778de1cf30dfbac70f.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -72,6 +91,8 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
+<link href="https://unpkg.com/tabulator-tables@6.3.0/dist/css/tabulator.min.css" rel="stylesheet">
+<script src="https://unpkg.com/tabulator-tables@6.3.0/dist/js/tabulator.min.js"></script>
 
 
 </head>
@@ -85,7 +106,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./summary.html"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Summary</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./proteomics.html"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Proteomics</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -124,8 +145,32 @@ ul.task-list li input[type="checkbox"] {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./summary.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Summary</span></span></a>
+  <a href="./genomics.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Genomic Data</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./pnt1.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Plasma NT1-tau in ABC-DS</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./p217.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Plasma P-tau217</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./proteomics.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Proteomics</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./faq.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Frequently Asked Questions</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -139,15 +184,24 @@ ul.task-list li input[type="checkbox"] {
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#background" id="toc-background" class="nav-link active" data-scroll-target="#background"><span class="header-section-number">5.1</span> Background</a></li>
+  <li><a href="#methods" id="toc-methods" class="nav-link" data-scroll-target="#methods"><span class="header-section-number">5.2</span> Methods</a></li>
+  <li><a href="#qaqc" id="toc-qaqc" class="nav-link" data-scroll-target="#qaqc"><span class="header-section-number">5.3</span> QA/QC</a></li>
+  <li><a href="#updates-to-previous-release" id="toc-updates-to-previous-release" class="nav-link" data-scroll-target="#updates-to-previous-release"><span class="header-section-number">5.4</span> Updates to Previous Release</a></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Summary</span></h1>
+<h1 class="title"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Proteomics</span></h1>
 </div>
 
 
@@ -164,9 +218,147 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p>In summary, this book has no content whatsoever.</p>
+<p>Last Revised: July 24, 2025<br>
+VERSION 2.1</p>
+<section id="background" class="level2" data-number="5.1">
+<h2 data-number="5.1" class="anchored" data-anchor-id="background"><span class="header-section-number">5.1</span> Background</h2>
+<p>Serum and plasma samples were processed and stored at the University of North Texas Health Science Center Institute for Translational Research and were run across three waves (Wave 1: 2019; Wave 2: 2021; Wave 3: 2022). Blood samples were initially prepared through an automated system utilizing a customized Hamilton Robotics StarPlus system. Proteomic assay kits were purchased from select vendors (Meso Scale Discovery, Quanterix). Samples were run in singlicate, with a subset run in duplicate. Control samples were included across plates and runs for quality control.</p>
+</section>
+<section id="methods" class="level2" data-number="5.2">
+<h2 data-number="5.2" class="anchored" data-anchor-id="methods"><span class="header-section-number">5.2</span> Methods</h2>
+<p><em>Electrochemiluminescence (ECL)</em></p>
+<p>Proteomic assay kits were commercially obtained from Meso Scale Discovery (MSD; <a href="http://www.mesoscale.com" target="_blank">http://www.mesoscale.com</a>). Per our previously published methods,<span class="citation" data-cites="petersen2020proteomicA petersen2020proteomicB"><sup>[<a href="references.html#ref-petersen2020proteomicA" role="doc-biblioref"><strong>1</strong></a>,<a href="references.html#ref-petersen2020proteomicB" role="doc-biblioref"><strong>2</strong></a>]</sup></span> samples were assayed using electrochemiluminescence (ECL) technology. The ECL platform has been extensively applied to assay biomarkers associated with the range of neurodegenerative diseases including Alzheimer’s disease (AD). The UNTHSC laboratory maintains a database of over n&gt;2000 samples from the neurotypical AD population conducted in duplicate using the ECL technology on the referenced MSD platform with average coefficient of variation (CVs) &lt; 10%. A total of 500ul of plasma and serum were assayed for the following proteomic markers: fatty acid binding protein 3 (FABP3), beta 2 microblogulin (B2M), Factor VII, I-309, pancreatic polypeptide (PPY), c-reactive protein (CRP), thrombopoietin (TPO), interleukin (IL)-5, IL-6, IL-8, IL-10, IL-18, alpha 2 macroglobulin (A2M), eotaxin 3, vascular cell adhesion molecule-1 (sVCAM-1), soluble intercellular adhesion molecule-1 (sICAM-1), thymus and activation regulated chemokine (TARC), tenascin C, tumor necrosis factor-alpha (TNF-a), and serum amyloid A (SAA) (see Table 1). Five pooled plasma and serum control samples were included on each MSD plate layout reflecting a similar distribution of age for Down Syndrome (DS) samples and sibling controls.</p>
+<p><em>Single Molecular Array (SIMOA)</em></p>
+<p>Proteomic assay kits were commercially obtained from Quanterix (<a href="http://quanterix.com" target="_blank">http://quanterix.com</a>). A total of 500 ul of plasma was assayed using Single Molecule Array (SIMOA) technology using HD-1 imager for some of Wave 1 assays and HD-X imager for Wave 1, Wave 2, and 3 (see Table 2). The following proteomic markers were derived: Amyloid beta (Aβ) 40 and 42, total tau, ptau181, glial fibrillary acidic protein (GFAP) and neurofilament light chain (NfL). Five pooled plasma control samples were included on each SIMOA plate layout reflecting a similar distribution of age for DS samples and sibling controls.</p>
+</section>
+<section id="qaqc" class="level2" data-number="5.3">
+<h2 data-number="5.3" class="anchored" data-anchor-id="qaqc"><span class="header-section-number">5.3</span> QA/QC</h2>
+<p>All supplies for key biological resources were purchased from multiple vendors via commercially available kits (e.g.&nbsp;Meso Scale Discovery; Quanterix). Each of these vendors conducts internal validation of resources. Protocols are conducted to ensure reproducibility of findings. Protocols include validation of resources, which spans monitoring dilution linearity, spiked recovery, monitoring of low and high end of detection ranges to avoid lack of reliability at restricted ranges, examination of matrix effects, inclusion of pooled standards across lots, examination of inter- and intra-assay variability, real-time monitoring of coefficient of variation (CVs) and monitoring of all lot numbers across experiments.</p>
+<p><strong>Table 1. Lot Number and Assay Information (Meso Scale Discovery)</strong></p>
+<div class="btn-group mb-3">
+<p><strong>Wave:</strong> <button class="wave-btn active" data-wave="Wave 1" selected="">Wave 1</button> <button class="wave-btn" data-wave="Wave 2">Wave 2</button> <button class="wave-btn" data-wave="Wave 3">Wave 3</button></p>
+</div>
+<div class="btn-group mb-3">
+<p><strong>Sample:</strong> <button class="type-btn active" data-type="Plasma" selected="">Plasma</button> <button class="type-btn" data-type="Serum">Serum</button></p>
+</div>
+<div id="variable-table">
+
+</div>
+<p><br></p>
+<p><strong>Table 2. Lot Number and Assay Information (Quanterix)</strong></p>
+<div class="btn-group mb-3">
+<p><strong>Wave:</strong> <button class="wave-btn-2 active" data-wave="Wave 1" selected="">Wave 1</button> <button class="wave-btn-2" data-wave="Wave 2">Wave 2</button> <button class="wave-btn-2" data-wave="Wave 3">Wave 3</button> <button class="wave-btn-2" data-wave="Wave 4">Wave 4</button></p>
+</div>
+<div id="variable-table2">
+
+</div>
+<script src="js/proteomics.js"></script>
+<p><br></p>
+<p><strong>Error Coding</strong>: -777777 Missing; -999999 LLDL</p>
+</section>
+<section id="updates-to-previous-release" class="level2" data-number="5.4">
+<h2 data-number="5.4" class="anchored" data-anchor-id="updates-to-previous-release"><span class="header-section-number">5.4</span> Updates to Previous Release</h2>
+<table class="table">
+<thead>
+<tr>
+<th style="width:15%">
+Column Name
+</th>
+<th style="width:15%">
+Date Effective
+</th>
+<th style="width:50%">
+Reason/Information
+</th>
+<th style="width:20%">
+Action
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+Project
+</td>
+<td>
+4/25/2025
+</td>
+<td>
+Internal identifier
+</td>
+<td>
+Removed from dataset
+</td>
+</tr>
+<tr>
+<td>
+BatchName
+</td>
+<td>
+4/25/2025
+</td>
+<td>
+Internal identifier
+</td>
+<td>
+Removed from dataset
+</td>
+</tr>
+<tr>
+<td>
+Conc_Merged
+</td>
+<td>
+4/25/2025
+</td>
+<td>
+Combined into a single column. From wave 4 onwards, use Comment_30%CVflag to identify if singlet or duplicate data.
+</td>
+<td>
+Removed from dataset
+</td>
+</tr>
+<tr>
+<td>
+Comment_30%CVflag
+</td>
+<td>
+4/25/2025
+</td>
+<td>
+Information on interpretation is available in the cell comments.
+</td>
+<td>
+Removed from dataset
+</td>
+</tr>
+<tr>
+<td>
+Comment_Instrument
+</td>
+<td>
+4/25/2025
+</td>
+<td>
+Data error from instrument
+</td>
+<td>
+Removed from dataset
+</td>
+</tr>
+</tbody>
+</table>
 
 
+<div id="refs" class="references csl-bib-body hanging-indent" role="list" style="display: none">
+<div id="ref-petersen2020proteomicA" class="csl-entry" role="listitem">
+1. Petersen M, Zhang F, Krinsky-McHale SJ, et al. Proteomic profiles of prevalent mild cognitive impairment and alzheimer’s disease among adults with down syndrome. <em>Alzheimer’s &amp; dementia (Amsterdam, Netherlands)</em>. 2020;12(1):e12023. doi:<a href="https://doi.org/10.1002/dad2.12023">10.1002/dad2.12023</a>
+</div>
+<div id="ref-petersen2020proteomicB" class="csl-entry" role="listitem">
+2. Petersen ME, Zhang F, Schupf N, et al. Proteomic profiles for alzheimer’s disease and mild cognitive impairment among adults with down syndrome spanning serum and plasma: An alzheimer’s biomarker consortium-down syndrome (ABC-DS) study. <em>Alzheimer’s &amp; dementia (Amsterdam, Netherlands)</em>. 2020;12(1):e12039. doi:<a href="https://doi.org/10.1002/dad2.12039">10.1002/dad2.12039</a>
+</div>
+</div>
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -571,13 +763,13 @@ ul.task-list li input[type="checkbox"] {
   </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="./clinical-core.html" class="pagination-link" aria-label="Clinical Core Methods">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Clinical Core Methods</span></span>
+      <a href="./p217.html" class="pagination-link" aria-label="Plasma P-tau217">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Plasma P-tau217</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./references.html" class="pagination-link" aria-label="References">
-        <span class="nav-page-text">References</span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./faq.html" class="pagination-link" aria-label="Frequently Asked Questions">
+        <span class="nav-page-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Frequently Asked Questions</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
