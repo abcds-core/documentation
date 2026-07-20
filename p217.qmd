@@ -1,0 +1,53 @@
+---
+toc: true
+bibliography: references.bib
+csl: american-medical-association-brackets.csl
+---
+
+# Plasma P-tau217
+
+Plasma tau phosphorylated at threonine 217 (P-tau217) and glial fibrillary
+acidic protein (GFAP) assays
+
+Last Revised: October 20, 2021  
+VERSION 1.0
+
+**Authors** Shorena Janelidze<sup>1</sup> and Oskar Hanson<sup>1</sup>
+
+**Affiliations**
+
+1. Lund University
+
+**Summary (or Abstract)**. Plasma concentrations of tau phosphorylated at
+threonine 217 (P-tau217) was measured using immunoassay developed by Lilly
+Research Laboratories. Plasma glial fibrillary acidic protein GFAP concentration
+was quantified using Simoa kit (Quanterix, Lexington, MA, USA)
+
+## Method
+
+Plasma P-tau217 concentration was measured according to the published protocols
+using immunoassay on a Mesoscale Discovery platform developed by Lilly Research
+Laboratories.1,2 Briefly, biotinylated‐IBA493 was used as a capture antibody and
+SULFO‐TAG‐4G10‐E2 (anti‐ Tau) as the detector and samples were diluted 1:2. The
+assay was calibrated with a synthetic Ptau217 peptide. Plasma GFAP concentration
+was quantified using Simoa kit (Quanterix, Lexington, MA, USA) according to the
+manufacturer's instructions. One sample with insufficient plasma volume was only
+analyzed with the P-tau217 assays. All measurements were above the lower limit
+of detection of the assay (P-tau217, 0.10 pg/ml; GFAP, 0.26 pg/ml). The
+inter-assay coefficient of variation (CV) for 3-4 quality control samples
+included in every run were 14.2% and 17.4% in the P-tau217 and GFAP assays,
+respectively. The intra-assay CV was 5.7% in the P-tau217 assay and 4.0% in the
+GFAP assay. All samples were analyzed by staff blinded to the clinical and
+imaging data.
+
+**About the Authors**: 
+
+This document was prepared by Dr Shorena Janelidze, Clinical Memory Research
+Unit, Lund University, Lund, Sweden. For more information, please contact
+Shorena Janelidze at +46 46 2229667 or by email at 
+<a href="mailto:shorena.janelidze@med.lu.se">shorena.janelidze@med.lu.se</a>.
+
+**Notice**: This document is presented by the author(s) as a service to ABC-DS data
+users. However, users should be aware that no formal review process has vetted
+this document and that ABC-DS cannot guarantee the accuracy or utility of this
+document.

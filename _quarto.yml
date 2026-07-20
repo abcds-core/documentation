@@ -9,6 +9,9 @@ book:
     - index.qmd
     - clinical-core.qmd
     - genomics.qmd
+    - pnt1.qmd
+    - p217.qmd
+    - proteomics.qmd
     - faq.qmd
     - references.qmd
 
@@ -19,5 +22,13 @@ format:
     theme:
       - lumen
       - custom.scss
+    include-in-header:
+      text: |
+        <link href="https://unpkg.com/tabulator-tables@6.3.0/dist/css/tabulator.min.css" rel="stylesheet">
+        <script src="https://unpkg.com/tabulator-tables@6.3.0/dist/js/tabulator.min.js"></script>
   pdf:
     documentclass: scrreprt
+
+resources:
+  - data/ProteomicsTableOne.json
+  - data/ProteomicsTableTwo.json

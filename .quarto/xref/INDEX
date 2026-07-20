@@ -19,5 +19,17 @@
   },
   "genomics.qmd": {
     "genomics.html": "ba345149"
+  },
+  "plasma.qmd": {
+    "plasma.html": "d162a060"
+  },
+  "pnt1.qmd": {
+    "pnt1.html": "2733e1ac"
+  },
+  "p217.qmd": {
+    "p217.html": "d4f9c4c0"
+  },
+  "proteomics.qmd": {
+    "proteomics.html": "ecd09eb9"
   }
 }

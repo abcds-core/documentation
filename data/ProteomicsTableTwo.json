@@ -1,0 +1,295 @@
+{
+  "Wave 1": [
+    {
+      "Imager": "HD-1 Imager ",
+      "Type": "Plasma",
+      "Analyte": "Ab40",
+      "Assay range (pg/mL)": "0-560 pg/mL",
+      "Lot Number": "502473",
+      "CV (%)": "0.043",
+      "LLOD": "0.196",
+      "HLOD": "560",
+      "Concentration": "pg/mL",
+      "Kit Information": "Neurology 3-Plex"
+    },
+    {
+      "Imager": "HD-1 Imager ",
+      "Type": "Plasma",
+      "Analyte": "Ab42",
+      "Assay range (pg/mL)": "0-240 pg/mL",
+      "Lot Number": "502473",
+      "CV (%)": "0.043",
+      "LLOD": "0.045",
+      "HLOD": "240",
+      "Concentration": "pg/mL",
+      "Kit Information": "Neurology 3-Plex"
+    },
+    {
+      "Imager": "HD-1 Imager ",
+      "Type": "Plasma",
+      "Analyte": "Tau",
+      "Assay range (pg/mL)": "0-400 pg/mL",
+      "Lot Number": "502473",
+      "CV (%)": "0.061",
+      "LLOD": "0.019",
+      "HLOD": "400",
+      "Concentration": "pg/mL",
+      "Kit Information": "Neurology 3-Plex"
+    },
+    {
+      "Imager": "HD-1 Imager ",
+      "Type": "Plasma",
+      "Analyte": "NF-L",
+      "Assay range (pg/mL)": "0-1440 pg/mL",
+      "Lot Number": "502433",
+      "CV (%)": "0.038",
+      "LLOD": "0.038",
+      "HLOD": "1400",
+      "Concentration": "pg/mL"
+    },
+    {
+      "Imager": "HD-X Imager",
+      "Type": "GFAP",
+      "Analyte": "0-4000 pg/mL",
+      "Assay range (pg/mL)": "503383",
+      "Lot Number": "0.064",
+      "CV (%)": "0.211",
+      "LLOD": "4000",
+      "HLOD": "pg/mL",
+      "Concentration": "GFAP Discovery"
+    },
+    {
+      "Imager": "HD-X Imager",
+      "Type": "pTau181",
+      "Analyte": "0-424 pg/mL",
+      "Assay range (pg/mL)": "503356",
+      "Lot Number": "0.069",
+      "CV (%)": "0.085",
+      "LLOD": "424",
+      "HLOD": "pg/mL",
+      "Concentration": "pTau181 Advantage V2"
+    }
+  ],
+  "Wave 2": [
+    {
+      "Imager": "HD-X Imager",
+      "Type": "Plasma",
+      "Analyte": "Ab40",
+      "Assay range (pg/mL)": "0-560 pg/mL",
+      "Lot Number": "503104",
+      "CV (%)": "4.278",
+      "LLOD": "0.196",
+      "HLOD": "560",
+      "Concentration": "pg/mL",
+      "Kit Information": "Neurology 3-Plex"
+    },
+    {
+      "Imager": "HD-X Imager",
+      "Type": "Plasma",
+      "Analyte": "Ab42",
+      "Assay range (pg/mL)": "0-240 pg/mL",
+      "Lot Number": "503104",
+      "CV (%)": "3.599",
+      "LLOD": "0.045",
+      "HLOD": "240",
+      "Concentration": "pg/mL",
+      "Kit Information": "Neurology 3-Plex"
+    },
+    {
+      "Imager": "HD-X Imager",
+      "Type": "Plasma",
+      "Analyte": "NfL",
+      "Assay range (pg/mL)": "0-1800 pg/mL",
+      "Lot Number": "502907",
+      "CV (%)": "0.027",
+      "LLOD": "0.038",
+      "HLOD": "1800",
+      "Concentration": "pg/mL",
+      "Kit Information": "NF-light Advantage"
+    },
+    {
+      "Imager": "HD-X Imager",
+      "Type": "Plasma",
+      "Analyte": "pTau181",
+      "Assay range (pg/mL)": "0-424 pg/mL",
+      "Lot Number": "503006",
+      "CV (%)": "4.946",
+      "LLOD": "0.085",
+      "HLOD": "424",
+      "Concentration": "pg/mL",
+      "Kit Information": "pTau181 Advantage V2"
+    },
+    {
+      "Imager": "HD-X Imager",
+      "Type": "Plasma",
+      "Analyte": "Total Tau",
+      "Assay range (pg/mL)": "0-400 pg/mL",
+      "Lot Number": "503104",
+      "CV (%)": "0.100",
+      "LLOD": "0.019",
+      "HLOD": "400",
+      "Concentration": "pg/mL",
+      "Kit Information": "Neurology 3-Plex"
+    }
+  ],
+  "Wave 3": [
+    {
+      "Imager": "HD-X Imager",
+      "Type": "Plasma",
+      "Analyte": "Ab40",
+      "Assay range (pg/mL)": "0-560 pg/mL",
+      "Lot Number": "503104",
+      "CV (%)": "0.037",
+      "LLOD": "0.196",
+      "HLOD": "560",
+      "Concentration": "pg/mL",
+      "Kit Information": "Neurology 3-Plex"
+    },
+    {
+      "Imager": "HD-X Imager",
+      "Type": "Plasma",
+      "Analyte": "Ab42",
+      "Assay range (pg/mL)": "0-240 pg/mL",
+      "Lot Number": "503104",
+      "CV (%)": "0.035",
+      "LLOD": "0.045",
+      "HLOD": "240",
+      "Concentration": "pg/mL",
+      "Kit Information": "Neurology 3-Plex"
+    },
+    {
+      "Imager": "HD-X Imager",
+      "Type": "Plasma",
+      "Analyte": "GFAP",
+      "Assay range (pg/mL)": "0-4000 pg/mL",
+      "Lot Number": "503383",
+      "CV (%)": "0.087",
+      "LLOD": "0.211",
+      "HLOD": "4000",
+      "Concentration": "pg/mL",
+      "Kit Information": "GFAP Discovery"
+    },
+    {
+      "Imager": "HD-X Imager",
+      "Type": "Plasma",
+      "Analyte": "NfL",
+      "Assay range (pg/mL)": "0-1800 pg/mL",
+      "Lot Number": "502907",
+      "CV (%)": "0.039",
+      "LLOD": "0.038",
+      "HLOD": "1800",
+      "Concentration": "pg/mL",
+      "Kit Information": "NF-light Advantage"
+    },
+    {
+      "Imager": "HD-X Imager",
+      "Type": "Plasma",
+      "Analyte": "pTau181",
+      "Assay range (pg/mL)": "0-424 pg/mL",
+      "Lot Number": "503356",
+      "CV (%)": "0.099",
+      "LLOD": "0.085",
+      "HLOD": "424",
+      "Concentration": "pg/mL",
+      "Kit Information": "pTau181 Advantage V2"
+    },
+    {
+      "Imager": "HD-X Imager",
+      "Type": "Plasma",
+      "Analyte": "Total Tau",
+      "Assay range (pg/mL)": "0-400 pg/mL",
+      "Lot Number": "503104",
+      "CV (%)": "0.064",
+      "LLOD": "0.019",
+      "HLOD": "400",
+      "Concentration": "pg/mL",
+      "Kit Information": "Neurology 3-Plex"
+    }
+  ],
+  "Wave 4": [
+    {
+      "Imager": "HD-X Imager",
+      "Type": "Plasma",
+      "Analyte": "Ab40",
+      "Assay range (pg/mL)": "0-600 pg/mL",
+      "Lot Number": "503863",
+      "CV (%)": "0.032",
+      "Average": "347.95",
+      "Standard Deviation": "9.92",
+      "Concentration": "pg/mL",
+      "Kit Information": "Neurology 3-Plex"
+    },
+    {
+      "Imager": "HD-X Imager",
+      "Type": "Plasma",
+      "Analyte": "Ab42",
+      "Assay range (pg/mL)": "0-200 pg/mL",
+      "Lot Number": "503863",
+      "CV (%)": "0.035",
+      "Average": "12.17",
+      "Standard Deviation": "0.42",
+      "Concentration": "pg/mL",
+      "Kit Information": "Neurology 3-Plex"
+    },
+    {
+      "Imager": "HD-X Imager",
+      "Type": "Plasma",
+      "Analyte": "GFAP",
+      "Assay range (pg/mL)": "0-4000 pg/mL",
+      "Lot Number": "504261",
+      "CV (%)": "0.123",
+      "Average": "245.20",
+      "Standard Deviation": "0.12",
+      "Concentration": "pg/mL",
+      "Kit Information": "GFAP Discovery"
+    },
+    {
+      "Imager": "HD-X Imager",
+      "Type": "Plasma",
+      "Analyte": "NfL",
+      "Assay range (pg/mL)": "0-1800 pg/mL",
+      "Lot Number": "503989",
+      "CV (%)": "0.047",
+      "Average": "15.60",
+      "Standard Deviation": "0.04",
+      "Concentration": "pg/mL",
+      "Kit Information": "NF-light Advantage V2"
+    },
+    {
+      "Imager": "HD-X Imager",
+      "Type": "Plasma",
+      "Analyte": "pTau181",
+      "Assay range (pg/mL)": "0-2000 pg/mL",
+      "Lot Number": "503954",
+      "CV (%)": "0.082",
+      "Average": "28.65",
+      "Standard Deviation": "2.00",
+      "Concentration": "pg/mL",
+      "Kit Information": "pTau181 Advantage V2.1"
+    },
+    {
+      "Imager": "HD-X Imager",
+      "Type": "Plasma",
+      "Analyte": "ptau217",
+      "Assay range (pg/mL)": "0.007-30 pg/mL",
+      "Lot Number": "999036",
+      "CV (%)": "0.063",
+      "Average": "0.80",
+      "Standard Deviation": "0.04",
+      "Concentration": "pg/mL",
+      "Kit Information": "Ptau217 Advantage Plus (AlzPath)"
+    },
+    {
+      "Imager": "HD-X Imager",
+      "Type": "Plasma",
+      "Analyte": "Total Tau",
+      "Assay range (pg/mL)": "0-400 pg/mL",
+      "Lot Number": "503863",
+      "CV (%)": "0.064",
+      "Average": "3.92",
+      "Standard Deviation": "0.22",
+      "Concentration": "pg/mL",
+      "Kit Information": "Neurology 3-Plex"
+    }
+  ]
+}

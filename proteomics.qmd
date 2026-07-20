@@ -1,0 +1,158 @@
+---
+toc: true
+bibliography: references.bib
+csl: american-medical-association-brackets.csl
+---
+
+# Proteomics
+
+Last Revised: July 24, 2025  
+VERSION 2.1
+
+## Background
+
+Serum and plasma samples were processed and stored at the University of North
+Texas Health Science Center Institute for Translational Research and were run
+across three waves (Wave 1: 2019; Wave 2: 2021; Wave 3: 2022). Blood samples
+were initially prepared through an automated system utilizing a customized
+Hamilton Robotics StarPlus system. Proteomic assay kits were purchased from
+select vendors (Meso Scale Discovery, Quanterix). Samples were run in
+singlicate, with a subset run in duplicate. Control samples were included across
+plates and runs for quality control.
+
+## Methods
+
+*Electrochemiluminescence (ECL)*
+
+Proteomic assay kits were commercially obtained from Meso Scale Discovery (MSD;
+<a href="http://www.mesoscale.com"
+target="_blank">http://www.mesoscale.com</a>). Per our previously published
+methods,[@petersen2020proteomicA; @petersen2020proteomicB] samples were assayed
+using electrochemiluminescence (ECL) technology. The ECL platform has been
+extensively applied to assay biomarkers associated with the range of
+neurodegenerative diseases including Alzheimer’s disease (AD). The UNTHSC
+laboratory maintains a database of over n>2000 samples from the neurotypical AD
+population conducted in duplicate using the ECL technology on the referenced MSD
+platform with average coefficient of variation (CVs) &lt; 10%. A total of 500ul
+of plasma and serum were assayed for the following proteomic markers: fatty acid
+binding protein 3 (FABP3), beta 2 microblogulin (B2M), Factor VII, I-309,
+pancreatic polypeptide (PPY), c-reactive protein (CRP), thrombopoietin (TPO),
+interleukin (IL)-5, IL-6, IL-8, IL-10, IL-18, alpha 2 macroglobulin (A2M),
+eotaxin 3, vascular cell adhesion molecule-1 (sVCAM-1), soluble intercellular
+adhesion molecule-1 (sICAM-1), thymus and activation regulated chemokine (TARC),
+tenascin C, tumor necrosis factor-alpha (TNF-a), and serum amyloid A (SAA) (see
+Table 1). Five pooled plasma and serum control samples were included on each MSD
+plate layout reflecting a similar distribution of age for Down Syndrome (DS)
+samples and sibling controls.
+
+*Single Molecular Array (SIMOA)*
+
+Proteomic assay kits were commercially obtained from Quanterix 
+(<a href="http://quanterix.com" target="_blank">http://quanterix.com</a>). A
+total of 500 ul of plasma was assayed using Single Molecule Array (SIMOA)
+technology using HD-1 imager for some of Wave 1 assays and HD-X imager for Wave
+1, Wave 2, and 3 (see Table 2). The following proteomic markers were derived:
+Amyloid beta (Aβ) 40 and 42, total tau, ptau181, glial fibrillary acidic protein
+(GFAP) and neurofilament light chain (NfL). Five pooled plasma control samples
+were included on each SIMOA plate layout reflecting a similar distribution of
+age for DS samples and sibling controls.
+
+## QA/QC
+
+All supplies for key biological resources were purchased from multiple vendors
+via commercially available kits (e.g. Meso Scale Discovery; Quanterix). Each of
+these vendors conducts internal validation of resources. Protocols are conducted
+to ensure reproducibility of findings. Protocols include validation of
+resources, which spans monitoring dilution linearity, spiked recovery,
+monitoring of low and high end of detection ranges to avoid lack of reliability
+at restricted ranges, examination of matrix effects, inclusion of pooled
+standards across lots, examination of inter- and intra-assay variability,
+real-time monitoring of coefficient of variation (CVs) and monitoring of all lot
+numbers across experiments.
+
+**Table 1. Lot Number and Assay Information (Meso Scale Discovery)**
+
+<div class="btn-group mb-3">
+  <strong>Wave:</strong>
+  <button class="wave-btn active" data-wave="Wave 1" selected>Wave 1</button>
+  <button class="wave-btn" data-wave="Wave 2">Wave 2</button>
+  <button class="wave-btn" data-wave="Wave 3">Wave 3</button>
+</div>
+
+<div class="btn-group mb-3">
+  <strong>Sample:</strong>
+  <button class="type-btn active" data-type="Plasma" selected>Plasma</button>
+  <button class="type-btn" data-type="Serum">Serum</button>
+</div>
+
+<div id="variable-table"></div>
+
+<br>
+
+**Table 2. Lot Number and Assay Information (Quanterix)**
+
+<div class="btn-group mb-3">
+  <strong>Wave:</strong>
+  <button class="wave-btn-2 active" data-wave="Wave 1" selected>Wave 1</button>
+  <button class="wave-btn-2" data-wave="Wave 2">Wave 2</button>
+  <button class="wave-btn-2" data-wave="Wave 3">Wave 3</button>
+  <button class="wave-btn-2" data-wave="Wave 4">Wave 4</button>
+</div>
+
+<div id="variable-table2"></div>
+
+<script src="js/proteomics.js"></script>
+
+<br>
+
+**Error Coding**: -777777 Missing; -999999 LLDL
+
+## Updates to Previous Release
+
+<table class="table">
+<thead>
+<tr>
+<th style="width:15%">Column Name</th>
+<th style="width:15%">Date Effective</th>
+<th style="width:50%">Reason/Information</th>
+<th style="width:20%">Action</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>Project</td>
+<td>4/25/2025</td>
+<td>Internal identifier</td>
+<td>Removed from dataset</td>
+</tr>
+
+<tr>
+<td>BatchName</td>
+<td>4/25/2025</td>
+<td>Internal identifier</td>
+<td>Removed from dataset</td>
+</tr>
+
+<tr>
+<td>Conc_Merged</td>
+<td>4/25/2025</td>
+<td>Combined into a single column. From wave 4 onwards, use Comment_30%CVflag to identify if singlet or duplicate data.</td>
+<td>Removed from dataset</td>
+</tr>
+
+<tr>
+<td>Comment_30%CVflag</td>
+<td>4/25/2025</td>
+<td>Information on interpretation is available in the cell comments.</td>
+<td>Removed from dataset</td>
+</tr>
+
+<tr>
+<td>Comment_Instrument</td>
+<td>4/25/2025</td>
+<td>Data error from instrument</td>
+<td>Removed from dataset</td>
+</tr>
+</tbody>
+</table>

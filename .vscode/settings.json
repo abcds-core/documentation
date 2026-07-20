@@ -9,5 +9,13 @@
   },
   "[bibtex]": {
     "editor.defaultFormatter": "James-Yu.latex-workshop"
+  },
+  "[json]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "cSpell.enabledFileTypes": {
+    "*": true,
+    "markdown": true,
+    "json": false
   }
 }

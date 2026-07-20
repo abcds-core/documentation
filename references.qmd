@@ -1,4 +1,14 @@
 # References {.unnumbered}
 
+```{r}
+#| eval: false
+#| include: false
+#| echo: false
+
+query <- ""
+bhelselR::fetch_pubmed(query)
+bhelselR::fetch_pubmed(query, output = "temp_references.bib", write = TRUE)
+```
+
 ::: {#refs}
 :::

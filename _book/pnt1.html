@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>1&nbsp; Introduction – documentation</title>
+<title>3&nbsp; Plasma NT1-tau in ABC-DS – Documentation</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -23,7 +23,26 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-</style>
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 
 <script src="site_libs/quarto-nav/quarto-nav.js"></script>
@@ -33,8 +52,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./summary.html" rel="next">
-<link href="./index.html" rel="prev">
+<link href="./p217.html" rel="next">
+<link href="./genomics.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
@@ -44,7 +63,7 @@ ul.task-list li input[type="checkbox"] {
 <link href="site_libs/quarto-html/quarto-syntax-highlighting-845c23b38eaddc0f92fda52bfe77a8c8.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-5ccb035bea26c1e21f80f44cf7c27909.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-1ef3e6d62a7b78778de1cf30dfbac70f.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -72,6 +91,8 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
+<link href="https://unpkg.com/tabulator-tables@6.3.0/dist/css/tabulator.min.css" rel="stylesheet">
+<script src="https://unpkg.com/tabulator-tables@6.3.0/dist/js/tabulator.min.js"></script>
 
 
 </head>
@@ -85,7 +106,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./intro.html"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Introduction</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./pnt1.html"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Plasma NT1-tau in ABC-DS</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -100,7 +121,7 @@ ul.task-list li input[type="checkbox"] {
   <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
     <div class="pt-lg-2 mt-2 text-left sidebar-header">
     <div class="sidebar-title mb-0 py-0">
-      <a href="./">documentation</a> 
+      <a href="./">Documentation</a> 
     </div>
       </div>
         <div class="mt-2 flex-shrink-0 align-items-center">
@@ -118,14 +139,38 @@ ul.task-list li input[type="checkbox"] {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./intro.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Introduction</span></span></a>
+  <a href="./clinical-core.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Clinical Core Methods</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./summary.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Summary</span></span></a>
+  <a href="./genomics.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Genomic Data</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./pnt1.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Plasma NT1-tau in ABC-DS</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./p217.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Plasma P-tau217</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./proteomics.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Proteomics</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./faq.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Frequently Asked Questions</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -139,15 +184,21 @@ ul.task-list li input[type="checkbox"] {
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#method" id="toc-method" class="nav-link active" data-scroll-target="#method"><span class="header-section-number">3.1</span> Method</a></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Introduction</span></h1>
+<h1 class="title"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Plasma NT1-tau in ABC-DS</span></h1>
 </div>
 
 
@@ -164,10 +215,39 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p>This is a book created from markdown and executable code.</p>
-<p>See <span class="citation" data-cites="knuth84">(<a href="references.html#ref-knuth84" role="doc-biblioref"><strong>knuth84?</strong></a>)</span> for additional discussion of literate programming.</p>
+<p>Last Revised: October 20, 2021<br>
+VERSION 1.0</p>
+<p><strong>Authors</strong> Andrew Stern<sup>1</sup>, Amirah Anderson<sup>1</sup>, Beth Ostaszewski<sup>1</sup>, Elizabeth Head<sup>2</sup>, and Dennis Selkoe<sup>1</sup></p>
+<p><strong>Affiliations</strong></p>
+<ol type="1">
+<li>Ann Romney Center for Neurologic Diseases, Brigham and Women’s Hospital, 60 Fenwood Road, Boston, MA 02115</li>
+<li>Department of Laboratory Medicine and Pathology, University of California, Irvine, 1111 Gillespie Neuroscience Research Facility, Irvine, CA 92697</li>
+</ol>
+<p><strong>Summary (or Abstract)</strong>. Our group recently developed a high-sensitivity plasma immunoassay for a novel Nterminal tau fragment termed NT1-tau on the Quanterix Simoa HD-1 platform.<span class="citation" data-cites="chhatwal2020plasma chen2019learnings mengel2020plasma mengel2020dynamics"><sup>[<a href="references.html#ref-chhatwal2020plasma" role="doc-biblioref"><strong>1</strong></a>–<a href="references.html#ref-mengel2020dynamics" role="doc-biblioref"><strong>4</strong></a>]</sup></span> This assay succeeded at discriminating AD and mild cognitive impairment due to AD from normal controls. We have recently moved this assay to the Quanterix HD-X platform and obtained NT1-tau values for ABC-DS Wave 1 plasmas, with plans to analyze its predictive power for onset of cognitive decline in people with Down syndrome.</p>
+<section id="method" class="level2" data-number="3.1">
+<h2 data-number="3.1" class="anchored" data-anchor-id="method"><span class="header-section-number">3.1</span> Method</h2>
+<p>Consumables and reagents other than antibodies were obtained from Quanterix (Lexington, MA). The tau capture antibody BT2 (194–198) was conjugated onto paramagnetic beads at 1.8 mg/mL. Detector antibody Tau12 was biotinylated according to the manufacturer using a ratio of 40 parts biotinylation reagent to 1-part antibody. Plasmas were centrifuged at 14,000 × g for 4 min and then diluted 1:4 with Tau 2.0 sample diluent reagent (Quanterix). Tau210 untagged standard was diluted linearly with Tau 2.0 sample diluent to a concentration range of 270–0.02 pg/mL. Sample, standards and blanks were prepared in 1.5 mL low-binding Eppendorf tubes and were analyzed in triplicate.</p>
+<p>The NT1 Simoa assay utilized a 3-step protocol and was performed at ambient temperature on a Simoa HD-X analyzer (Quanterix Corp.). In step 1, 100 μl of standard, blank, or sample were added to beads coated with capture antibody and mixed for 30 min. The beads were then harvested and washed with wash buffer. In step 2, biotinylated detection antibody (0.6 μg/ml) was added and incubated for 10 min 30 s, and the beads were then washed three times. In step 3, 150 pM streptavidin-β-galactosidase was added, and following a further wash step, enzyme substrate (resorufin β-D-galactopyranoside) was added. The bead-bearing complexes were then resuspended and loaded into Simoa arrays, each containing 216,000 femtoliter-sized wells. The average enzyme unit per bead (AEB) was determined as described previously.<span class="citation" data-cites="mengel2020plasma"><sup>[<a href="references.html#ref-mengel2020plasma" role="doc-biblioref"><strong>3</strong></a>]</sup></span> Standard curves of AEB vs.&nbsp;Tau210 concentration were fitted to a four-parameter logistic function with 1/Y2 weighting.</p>
+<p>The samples were analyzed over five runs spanning eight days, with pooled-plasma internal standards run on each plate to ensure reproducibility across runs. The Simoa HD-X instrument caused plate wells to be randomly dropped from the analysis, resulting in 13% of samples being analyzed with two instead of three technical replicates, and a single sample (0.3%) to be analyzed in single replicate. Detailed data on internal controls, coefficients of variation, and dropped values or any other technical aspects are available upon request.</p>
+<p><strong>About the Authors</strong>: This document was prepared by authors AS, BO, and DS above. For more information please contact <a href="mailto:dselkoe@bwh.harvard.edu">Dennis Selkoe</a>.</p>
+<p><strong>Notice</strong>: This document is presented by the author(s) as a service to ABC-DS data users. However, users should be aware that no formal review process has vetted this document and that ABC-DS cannot guarantee the accuracy or utility of this document.</p>
 
 
+<div id="refs" class="references csl-bib-body hanging-indent" role="list" style="display: none">
+<div id="ref-chhatwal2020plasma" class="csl-entry" role="listitem">
+1. Chhatwal JP, Schultz AP, Dang Y, et al. Plasma n-terminal tau fragment levels predict future cognitive decline and neurodegeneration in healthy elderly individuals. <em>Nature communications</em>. 2020;11(1):6024. doi:<a href="https://doi.org/10.1038/s41467-020-19543-w">10.1038/s41467-020-19543-w</a>
+</div>
+<div id="ref-chen2019learnings" class="csl-entry" role="listitem">
+2. Chen Z, Mengel D, Keshavan A, et al. Learnings about the complexity of extracellular tau aid development of a blood-based screen for alzheimer’s disease. <em>Alzheimer’s &amp; dementia : the journal of the Alzheimer’s Association</em>. 2019;15(3):487-496. doi:<a href="https://doi.org/10.1016/j.jalz.2018.09.010">10.1016/j.jalz.2018.09.010</a>
+</div>
+<div id="ref-mengel2020plasma" class="csl-entry" role="listitem">
+3. Mengel D, Janelidze S, Glynn RJ, Liu W, Hansson O, Walsh DM. Plasma NT1 tau is a specific and early marker of alzheimer’s disease. <em>Annals of neurology</em>. 2020;88(5):878-892. doi:<a href="https://doi.org/10.1002/ana.25885">10.1002/ana.25885</a>
+</div>
+<div id="ref-mengel2020dynamics" class="csl-entry" role="listitem">
+4. Mengel D, Liu W, Glynn RJ, et al. Dynamics of plasma biomarkers in down syndrome: The relative levels of Aβ42 decrease with age, whereas NT1 tau and NfL increase. <em>Alzheimer’s research &amp; therapy</em>. 2020;12(1):27. doi:<a href="https://doi.org/10.1186/s13195-020-00593-7">10.1186/s13195-020-00593-7</a>
+</div>
+</div>
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -572,13 +652,13 @@ ul.task-list li input[type="checkbox"] {
   </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="./index.html" class="pagination-link" aria-label="Preface">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Preface</span>
+      <a href="./genomics.html" class="pagination-link" aria-label="Genomic Data">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Genomic Data</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./summary.html" class="pagination-link" aria-label="Summary">
-        <span class="nav-page-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Summary</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./p217.html" class="pagination-link" aria-label="Plasma P-tau217">
+        <span class="nav-page-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Plasma P-tau217</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

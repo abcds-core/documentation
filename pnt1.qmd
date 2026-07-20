@@ -1,0 +1,70 @@
+---
+toc: true
+bibliography: references.bib
+csl: american-medical-association-brackets.csl
+---
+
+# Plasma NT1-tau in ABC-DS 
+
+Last Revised: October 20, 2021  
+VERSION 1.0
+
+**Authors** Andrew Stern<sup>1</sup>, Amirah Anderson<sup>1</sup>, Beth Ostaszewski<sup>1</sup>, Elizabeth Head<sup>2</sup>, and Dennis Selkoe<sup>1</sup>
+
+**Affiliations**
+
+1. Ann Romney Center for Neurologic Diseases, Brigham and Women’s Hospital, 60
+Fenwood Road, Boston, MA 02115
+2. Department of Laboratory Medicine and Pathology, University of California,
+Irvine, 1111 Gillespie Neuroscience Research Facility, Irvine, CA 92697
+
+**Summary (or Abstract)**. Our group recently developed a high-sensitivity
+plasma immunoassay for a novel Nterminal tau fragment termed NT1-tau on the
+Quanterix Simoa HD-1 platform.[@chhatwal2020plasma; @chen2019learnings;
+@mengel2020plasma; @mengel2020dynamics] This assay succeeded at discriminating
+AD and mild cognitive impairment due to AD from normal controls. We have
+recently moved this assay to the Quanterix HD-X platform and obtained NT1-tau
+values for ABC-DS Wave 1 plasmas, with plans to analyze its predictive power for
+onset of cognitive decline in people with Down syndrome.
+
+## Method
+
+Consumables and reagents other than antibodies were obtained from Quanterix
+(Lexington, MA). The tau capture antibody BT2 (194–198) was conjugated onto
+paramagnetic beads at 1.8 mg/mL. Detector antibody Tau12 was biotinylated
+according to the manufacturer using a ratio of 40 parts biotinylation reagent to
+1-part antibody. Plasmas were centrifuged at 14,000 × g for 4 min and then
+diluted 1:4 with Tau 2.0 sample diluent reagent (Quanterix). Tau210 untagged
+standard was diluted linearly with Tau 2.0 sample diluent to a concentration
+range of 270–0.02 pg/mL. Sample, standards and blanks were prepared in 1.5 mL
+low-binding Eppendorf tubes and were analyzed in triplicate.
+
+The NT1 Simoa assay utilized a 3-step protocol and was performed at ambient
+temperature on a Simoa HD-X analyzer (Quanterix Corp.). In step 1, 100 μl of
+standard, blank, or sample were added to beads coated with capture antibody and
+mixed for 30 min. The beads were then harvested and washed with wash buffer. In
+step 2, biotinylated detection antibody (0.6 μg/ml) was added and incubated for
+10 min 30 s, and the beads were then washed three times. In step 3, 150 pM
+streptavidin-β-galactosidase was added, and following a further wash step,
+enzyme substrate (resorufin β-D-galactopyranoside) was added. The bead-bearing
+complexes were then resuspended and loaded into Simoa arrays, each containing
+216,000 femtoliter-sized wells. The average enzyme unit per bead (AEB) was
+determined as described previously.[@mengel2020plasma] Standard curves of AEB
+vs. Tau210 concentration were fitted to a four-parameter logistic function with
+1/Y2 weighting.
+
+The samples were analyzed over five runs spanning eight days, with pooled-plasma
+internal standards run on each plate to ensure reproducibility across runs. The
+Simoa HD-X instrument caused plate wells to be randomly dropped from the
+analysis, resulting in 13% of samples being analyzed with two instead of three
+technical replicates, and a single sample (0.3%) to be analyzed in single
+replicate. Detailed data on internal controls, coefficients of variation, and
+dropped values or any other technical aspects are available upon request.
+
+**About the Authors**: This document was prepared by authors AS, BO, and DS
+above. For more information please contact <a href="mailto:dselkoe@bwh.harvard.edu">Dennis Selkoe</a>.
+
+**Notice**: This document is presented by the author(s) as a service to ABC-DS data
+users. However, users should be aware that no formal review process has vetted
+this document and that ABC-DS cannot guarantee the accuracy or utility of this
+document.
