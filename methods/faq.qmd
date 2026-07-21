@@ -1,7 +1,7 @@
 ---
 toc: true
-bibliography: references.bib
-csl: american-medical-association-brackets.csl
+bibliography: ../references.bib
+csl: ../american-medical-association-brackets.csl
 ---
 
 # Frequently Asked Questions

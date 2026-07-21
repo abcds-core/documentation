@@ -1,0 +1,161 @@
+---
+toc: true
+bibliography: ../../references.bib
+csl: ../../american-medical-association-brackets.csl
+---
+
+# Cerebrospinal Fluid (CSF)
+
+**Authors** Suzanne Schindler, MD, PhD<sup>1</sup>, Fatima S. Amtashar, MS<sup>2</sup>, Rachel Henson, MS<sup>3</sup>, Elizabeth Herries, BA<sup>1</sup>, and Jasmine Stewert, BS<sup>1</sup>
+
+**Affiliations**
+
+1. Knight Alzheimer Disease Research Center Fluid Biomarker Core Department of
+Neurology, Ladenson Lab Department of Pathology and Immunology, Washington University
+in St. Louis
+
+**Summary or Scientific Abstract**. CSF samples were processed and stored at the
+Knight ADRC Fluid Biomarker Core and pulled in two sets on 10/19/2023. With one
+aliquot, concentrations of Aβ40, Aβ42, total tau (t-tau), tau phosphorylated at
+181 (p-tau181) and neurofilament light chain (NfL), were measured by
+chemiluminescent enzyme immunoassay using a fully automated platform (LUMIPULSE
+G1200, Fujirebio, Malvern, PA) according to manufacturer's specifications. All
+samples and controls were analyzed on 12/08/2023 in singlicate, and three pooled
+CSF controls were analyzed in duplicate for quality control (QC).
+
+With a second aliquot, concentrations of Visinin-like Protein-1 (VILIP-1),
+Synaptosomal- Associated Protein [25KDa] (SNAP-25) and Neurogranin (Ng) were
+measured using quantitative fluorescent two-site immunoassays using Single
+Molecule Counting (SMC<sup>TM</sup>) technology originally marketed by Singulex
+for their Erenna<span class="normal-trademark">&reg;</span> system. Samples
+were analyzed between 10/21/2023 and 10/28/2023. Samples were frozen and later
+used for the measurement of YKL-40 using a commercially available plate-based
+assay (Quidel MicroVue<sup>TM</sup> Bone) between 3/26/2024-4/2/2024. All
+controls and samples were analyzed in duplicate.
+
+## Method
+
+**Lumipulse**: Prior to analysis, samples were brought to room temperature per
+manufacturer’s instructions.[@fujirebio2019_abeta42_ircs;
+@fujirebio2019_abeta40_ircs; @fujirebio2019_ptau181_ircs;
+@fujirebio2017_totaltau_ircs] Samples were briefly vortexed and centrifuged to
+collect, and 450ul was transferred to polystyrene cuvettes for analysis.
+Concentrations of p-tau181, t-tau, Aβ40, Aβ42 and NfL, were measured using the
+Lumipulse G1200 fully automated platform according to manufacturer's
+specifications,[@fujirebio2019_abeta42_ircs; @fujirebio2019_abeta40_ircs;
+@fujirebio2019_ptau181_ircs; @fujirebio2017_totaltau_ircs] and analysis was
+completed within 4 hours of transfer off wet ice to maintain sample stability.
+Fujirebio recommends that each lab establish their own ranges which are
+reflected in **table 1** alongside the manufacturer’s measurement ranges.
+
+**YKL-40**: The MicroVue YKL-40 assay kit has been validated for use with human
+serum and EDTA plasma specimens by Quidel Corporation. Additionally, human
+cerebrospinal fluid has been tested and shown to be suitable for use in the
+assay in an independent study.[@microvue_ykl40_eia; @stergaard2002elevated]
+Concentrations of YKL-40 were measured according to manufacturer's
+specifications.[@microvue_ykl40_eia] Prior to analysis, CSF samples were thawed
+on wet ice and vortexed briefly to mix. Samples were diluted three-fold with the
+provided sample diluent in a 96-well pre-plate and mixed well prior to
+transferring to the assay plate. Samples, standards, and controls were run in
+duplicate. All incubation steps were run at room temperature (18 to 28⁰C). After
+an incubation period of 60 minutes, plates were washed to remove any unbound
+material. In the second step, the rabbit anti-YKL-40 detection antibody was
+added to each assay well, and the plate was incubated for 60 minutes. Plates
+were washed again and in the third step the chromogenic substrate solution was
+added to the assay wells for 60 minutes. After the incubation period, the
+reaction was stopped by adding manufacturer supplied Stop Solution and the
+optical density (OD) was read at 405 nm. The color intensity of the reaction
+mixture is proportional to the concentration of YKL-40 present in the test
+specimens, standards, and controls.[@microvue_ykl40_eia] The limit of
+quantitation for this assay and detection range are reflected in **table 2**.
+
+**VILIP-1, SNAP-25 and Neurogranin**: Prior to analysis, samples were thawed for
+one hour at 4°C and centrifuged at 11,000 g for 30 seconds. 200 ul of CSF was
+transferred to 96 well pre-plate. All assay steps were performed at room
+temperature (19 to 21 ⁰C).
+
+For the VILIP-1, SNAP-25 and Ng assays, per well, 25ul, 25ul and 5ul of CSF
+respectively (or standard) were diluted with buffer to a total volume of 100ul,
+then combined with 100ul of capture antibody coated magnetic microparticles per
+well. Samples were assayed in duplicate and standards in triplicate. Plates were
+then mixed for 2 hours at ~500 rpms on a plate shaker. After washing the
+magnetic microparticles two times using a Tecan Hydroflex plate washer, 20ul of
+fluorescent dye labeled detection antibody was added and mixed for one hour at
+~650 rpm. After washing the magnetic microparticles 4 times, 21ul per well of
+elution buffer was added for 10 minutes (with mixing at ~650 rpm) to separate
+detection antibodies from the microparticles. Eluted antibodies (20ul per well)
+were then transferred to an Aurora glass-bottomed barrier plate containing 4ul
+per well of Buffer C (pH = 8) to neutralize the elution buffer (pH = 2.5). After
+briefly pulse centrifuging the plate to collect and mix the well contents,
+plates were read on the SMCxPRO instrument.
+
+Calibration curves for the VILIP-1, SNAP-25 and Ng assays were prepared with
+Nmyristoylated His-tagged Human VILIP-1 monomer from Proteos, Inc (Kalamazoo,
+MI), Cell Sciences (Newburyport, MA) recombinant human SNAP-25-His and synthetic
+full-length Ng from AAPPTec Inc (Louisville, KY) respectively. All calibration
+materials were quantitated using amino acid analysis. The methods for
+preparation of assay reagents and assay protocols are described in Crimmins 2017
+Clinical Chemistry for VILIP-1,[@crimmins2017double] Sutphen 2018 Alzheimer’s &
+Dementia for SNAP-25,[@fujirebio2019_abeta_controls] and Willemse 2018 Clinical
+Chemistry for Ng.[@willemse2018neurogranin] Lots for these assays are reflected
+in **table 3**. Limits of quantitation are shown in **table 4** and QC
+measurements are reflected in **table 5**.
+
+**Table 1**. Lot numbers and assay summary (Lumipulse)
+
+{{< include html/table1.html >}}
+
+**Table 2**. Lot numbers and assay summary (Plate Based Assays)
+
+{{< include html/table2.html >}}
+
+**Table 3**. Reagents: VILIP-1 SNAP-25, and Neurogranin
+
+{{< include html/table3.html >}}
+
+**Table 4**. Limits of Quantitation for VILIP-1, SNAP-25, and Neurogranin
+
+{{< include html/table4.html >}}
+
+**Table 5**. QC Means for VILIP-1, SNAP-25, and Neurogranin
+
+{{< include html/table5.html >}}
+
+## Data Dictionary
+
+1. BDS ID: BDS ID Assigned to samples.
+2. NiAD_ID: NiAD ID assigned to samples.
+3. ADDS_ID: ADDS ID assigned to samples.
+4. CSF_LP_DATE: Date that CSF was collected.
+5. Visit: Visit number as recorded on the CSF collection worksheet
+1. Cycle: Cycle number as recorded on the CSF collection worksheet
+2. LP_no: LP Number noted by Fluid Biomarker Core
+3. CSF_AB40: Aβ40 in pg/mL
+4. CSF_AB42: Aβ42 in pg/mL
+5. CSF_tTau: total tau in pg/mL
+6. CSF_pTau: tau phosphorylated at position 181 in pg/mL
+7. CSF_NfL: Neurofilament light chain in pg/mL
+8. CSF_YKL40: YKL-40 in ng/mL
+9. CSF_SNAP25: Synaptosomal-Associated Protein [25KDa] in pg/mL
+10. CSF_NG: Neurogranin in pg/mL
+11. CSF_VILIP1: Visinin-like Protein-1in pg/mL
+
+<!-- Add references -->
+
+Additional References[@fujirebio2018_ptau181_controls;
+@fujirebio2017_totaltau_controls; @ibl2019_nflight_elisa;
+@norgren2002monoclonal; @norgren2003elevated; @norgren2004neurofilament;
+@sutphen2018longitudinal; @westgard1981multi]
+
+**About the Authors** This document was prepared by Fatima S. Amtashar, MS,
+Elizabeth Herries, BA, Rachel Henson, MS, Jasmine Stewert, BS, and Katherine E.
+Volluz, BS, Knight Alzheimer Disease Research Center Fluid Biomarker Core
+Washington University in St. Louis Dept. of Neurology/ Ladenson Lab Dept. of
+Pathology and Immunology. The lab is supervised by Suzanne Schindler, MD, PhD.
+For more information, please contact Suzanne Schindler, MD, PhD at
+<a href="schindler.s.e@wustl.edu">schindler.s.e@wustl.edu</a>.
+
+**Notice**: This document is presented by the author(s) as a service to NCRAD
+data users. However, users should be aware that no formal review process has
+vetted this document and that NCRAD cannot guarantee the accuracy or utility of
+this document.

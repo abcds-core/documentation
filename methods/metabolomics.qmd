@@ -1,0 +1,140 @@
+---
+toc: true
+bibliography: ../references.bib
+csl: ../american-medical-association-brackets.csl
+---
+
+# Metabolomics
+
+ABC-DS LC-MS Metabolomics Methodology
+
+**Authors** Shivani Bansal<sup>1</sup>, Michael Vu<sup>2</sup>, Amrita K Cheema<sup>1</sup>, and Mark Mapstone<sup>2</sup>
+
+**Affiliations**
+
+1. Department Oncology, Georgetown University, Washington DC USA
+2. Department of Neurology, University of California Irvine, Irvine CA USA
+
+**Summary**. This dataset comprises comprehensive, dual-platform plasma profiles
+targeting approximately 270 polar endogenous metabolites and 24 distinct lipid
+classes. All data were acquired via liquid chromatography-tandem mass
+spectrometry (LC-MS/MS) on a QTRAP&reg; 5500 system operating in both positive and
+negative ion modes. To ensure high data quality, robust quality control measures
+were implemented, including the periodic injection of pooled QC samples, NIST
+plasma references, and blank solvents to monitor instrumental variance and
+minimize carry-over effects. Intra-batch signal drift was corrected using
+Quality Control-based Robust LOESS Signal Correction (QC-RLSC). Values are
+reported as relative abundances normalized to internal standards.
+
+## Method
+
+**Usage Note**. Data are provided in units of relative abundance, normalized to
+internal standards and corrected for instrumental signal drift using Quality
+Control-based Robust LOESS Signal Correction (QC-RLSC). Negative values can
+should be interpreted as measurements falling below the technical noise floor
+after adjustment. Data were acquired in separate batches with significant
+inter-batch variance and demographic variables (age, sex) are not balanced
+across these batches. All longitudinal or pooled analyses must account for batch
+as a covariate. We recommend using methods such as ComBat or Linear Mixed Models
+(LMM) that incorporate batch while preserving biological variance by protecting
+primary clinical covariates. The QC report is also included, providing the
+precursor (Q1) and product (Q3) ions, retention times (RT), and batch-specific
+coefficients of variation (CV) among QC.
+
+**Materials**. All LC-MS grade solvents including acetonitrile and water were
+purchased from Fisher Optima grade, Fisher Scientific. High purity formic acid
+(99%) was purchased from Thermo-Scientific. Debrisoquine and 4-nitrobenzoic acid
+were purchased from Sigma- Aldrich. EquiSPLASH® LIPIDOMIX® quantitative mass
+spec internal standard and 15:0-18:1-d7-PA, C15 Ceramide-d7 (d18:1-d7/15:0) and
+18:1 Chol (D7) ester were purchased from Avanti polar lipids. Internal standard
+for free fatty acid (FFA), dihydroceramides (DCER), hexosylceramides (HCER),
+lactosylceramides (LCER) were purchased from Sciex as Lipidyzer platform kit.
+
+**Polar Metabolomics**. This method is developed to quantitate around 270 polar
+endogenous metabolites across various biological pathways, (and two internal
+standards) with 206 transitions in the positive ion mode and 160 transitions in
+the negative ion mode using QTRAP® 5500 LC-MS/MS System (Sciex). For the
+purpose, 25 μL of each plasma sample was dissolved in 100 μL of extraction
+buffer (methanol/water 50/50) containing 200 ng/mL of debrisoquine (DBQ) as
+internal standard for positive mode and 200 ng/mL of 4-nitrobenzoic acid as
+internal standard for negative mode. The samples were vortexed for 30 seconds
+and incubated on ice for 20 min. To the above mixture, 100 μL of chilled
+acetonitrile was added. The samples were incubated at -20 ℃ for 20 min. Samples
+were centrifuged at 13,000 rpm for 20 min at 4 ℃. The supernatant was
+transferred to MS vial for LC-MS analysis. Five microliter of the prepared
+sample was injected onto a Kinetex 2.6 μm 100 Å 100 × 2.1 mm (Phenomenex) using
+SIL-30 AC auto sampler (Shimadzu) connected with a high flow LC-30AD solvent
+delivery unit (Shimadzu) and CBM-20A communication bus module (Shimadzu) online
+with QTRAP 5500 (Sciex, MA, USA) operating in positive and negative ion mode. A
+binary solvent comprising of water with 0.1% formic acid (solvent A) and
+acetonitrile with 0.1% formic acid (solvent B) was used. The extracted
+metabolites were resolved at 0.2 mL/min flow rate starting with 100% of solvent
+A and hold for 2.1 minutes and moving to 5% of solvent A over a time period of
+12 minute and hold for 1 minute and equilibrating to initial conditions over a
+time period of 7 minutes using auto sampler temperature 15 °C and oven
+temperature 30 °C. Source and gas setting for the method were as follow: curtain
+gas = 35, CAD gas = medium, ion spray voltage = 2500 V in positive mode and
+−4500 V in negative mode, temperature = 400 °C, nebulizing gas = 60 and heater
+gas = 70.
+
+**Lipidomics**. This method is designed to measure 24 classes of lipid molecules
+which includes diacylglycerols (DAG), cholesterol esters (CE), sphingomyelins
+(SM), phosphatidylcholine (PC), triacylglycerols (TAG), free fatty acids (FFA),
+ceramides (CER), dihydroceramides (DCER), hexosylceramide (HCER),
+lactosylceramide (LCER), phosphatidylethanolamine (PE), lysophosphatidylcholine
+(LPC), lysophosphatidylethanolamine (LPE), phosphatidic acid (PA),
+lysophosphatidic acid (LPA), phosphatidylinositol (PI), lysophosphatidylinositol
+(LPI), phosphatidylglycerol (PG), lysophosphatidylglycerol
+(LPG),phosphatidylserine (PS), lysophosphatidylserine (LPS), cardiolipins (CL),
+carnitines (CAR) and free fatty acids (FFA) using QTRAP® 5500 LC-MS/MS System
+(Sciex). For the purpose, 20 μL of each plasma sample was dissolved in 100 μL of
+chilled isopropanol containing internal standards and samples were vortexed. The
+samples were vortexed again for 1 min and kept on ice for 30 minutes. Samples
+were incubated at -20°C for overnight for complete protein precipitation. The
+samples were centrifuged at 13,000 rpm for 20 minutes at 4°C. The supernatant
+was transferred to MS vial for LC-MS analysis. Five μL of each sample was
+injected onto a Xbridge amide 3.5 μm, 4.6 X 100 mm (waters) using SIL-30 AC auto
+sampler (Shimadzu) connected with a high flow LC-30AD solvent delivery unit
+(Shimadzu) and CBM-20A communication bus module (Shimadzu) online with QTRAP
+5500 (Sciex, MA, USA) operating in positive and negative ion mode. A binary
+solvent comprising of acetonitrile/water 95/5 with 10 mM ammonium acetate as
+solvent A and acetonitrile/water 50/50 with 10 mM ammonium acetate as solvent B
+was used for the resolution. Lipids were resolved at 0.7 mL/min flow rate,
+initial gradient conditions started with 100% of solvent A, shifting towards
+99.9% of solvent A over a time period of 3 minutes, 94% of solvent A over a time
+period of 3 minutes and 25% of solvent A over a period of 4 minutes. Finally,
+washing with 100% of B for 6 minutes and equilibrating to initial conditions
+(100% of solvent A) over a time period of 6 minutes using auto sampler
+temperature 15°C and oven temperature 35°C. Source and gas setting were as
+follow: curtain gas = 30, CAD gas = medium, ion spray voltage = 5.5 kV in
+positive mode and −4.5 kV in negative mode, temperature = 550 °C, nebulizing gas
+= 50 and heater gas = 60.
+
+**Quality Control**. The quality and reproducibility of LC-MS data was ensured
+using a number of measures. The column was conditioned using the pooled QC
+samples initially and were also injected periodically (after every 10 sample
+injections) to monitor shifts in signal intensities and retention time as
+measures of reproducibility and data quality of the LC-MS data. We also ran NIST
+plasma sample (after every 20 samples) prepared in the same manner to check the
+instrumental variance. We also have blank solvent runs between set of samples
+(after every 10 samples before and after pooled QC samples) to minimize
+carry-over effects. The reports of pooled QC are provided in addition to the
+metabolomics data.
+
+**Preprocessing**. The polar metabolites were normalized to internal standards area
+corresponding to acquisition mode while lipidomic data were normalized to
+15:0-18:1(d7)-15:0 TAG for positive mode and 15:0-18:1(d7) PC for negative mode
+acquisition. All the data were processed using MultiQuant 3.0.3 (Sciex) with
+each batch preprocessed seperately. Missing values were imputed with half the
+minimum value. Signal drift was adjusted for using Quality Control-based Robust
+LOESS Signal Correction (QC-RLSC).
+
+**Authors**. This document was prepared by Shivani Bansal (Department Oncology,
+Georgetown University) and Michael Vu (Department of Neurology, University of
+California Irvine). For more information please contact Michael Vu by email at
+<a href="mailto:mmvu@hs.uci.edu">mmvu@hs.uci.edu</a>.
+
+Notice: This document is presented by the author(s) as a service to ABC-DS data
+users. However, users should be aware that no formal review process has vetted
+this document and that ABC-DS cannot guarantee the accuracy or utility of this
+document.

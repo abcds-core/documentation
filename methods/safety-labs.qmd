@@ -1,0 +1,41 @@
+---
+toc: true
+bibliography: ../references.bib
+csl: ../american-medical-association-brackets.csl
+---
+
+# Safety Indicators
+
+**Prepared by**: 
+
+Indiana University Health Pathology Laboratory
+Laboratory Information Services
+
+The Indiana University Health Pathology Laboratory uses a Logical Observation
+Identifiers Names and Codes (LOINC) naming convention (https://loinc.org/) as
+field (variable) names for analytes. While most field names in the file are
+self-documenting, the following are definitions of a set of abbreviations that
+are frequently used in the field names, followed by explanatory information
+about a number of specific fields, including algorithms used to calculated
+averages and ratios.
+
+<u>Abbreviations</u>:
+- SerPl – Serum or Plasma specimen type is acceptable
+- QN – Quantitative method
+- QL – Qualitative method
+
+<u>Detailed information regarding specific analytes</u>:
+
+- Cholesterol High Density Lipid SerPl QN: <span style="color:#0000FF;">HDL cholesterol Result only</span>
+- Cholesterol SerPl QN: <span style="color:#0000FF;">Total Cholesterol result</span>
+- Total Cholesterol/HDL Ratio: <span style="color:#0000FF;">Total Cholesterol divided by HDL</span>
+- Low Density Lipoprotein Calculated: <span style="color:#0000FF;">Total Cholesterol – HDL result</span>
+- Triglyceride SerPl QN
+- Est Average Glucose mg/dL: <span style="color:#0000FF;">=(28.7*Hemoglobin A1C-46.7)</span>
+- Est Average Glucose mmol/L: <span style="color:#0000FF;">=(1.59*Hemoglobin A1C-2.59)</span>
+- Glucose SerPl QN
+- Hemoglobin A1C HPLC Bld QN
+- T4 Free Direct SerPl QN: <span style="color:#0000FF;">direct measurement of Free T4 (Thryroxine) levels</span>
+- TPO Ab QN: <span style="color:#0000FF;">Thyroid Peroxidase Antibody testing</span>
+- Triiodothyronine Ser QN
+- TSH 3rd Generation SerPl QN: <span style="color:#0000FF;">Thyroid Stimulating Hormone testing</span>

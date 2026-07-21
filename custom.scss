@@ -40,6 +40,26 @@ pre.sourceCode {
   border-radius: 6px;
 }
 
+#csf-table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+#csf-table,
+#csf-table th,
+#csf-table td {
+  border: 1px solid black;
+}
+
+.normal-trademark {
+  vertical-align: baseline; /* Pushes it down to the text line */
+  font-size: 1.5em; /* Forces it to match the surrounding text size */
+  line-height: 0.5; /* Fixes any inherited line height issues */
+  margin-top: 10px !important;
+}
+
+// Frequently Asked Questions
+
 /* Shared layout (required for all styles) */
 .faq-q,
 .faq-a {

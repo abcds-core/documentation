@@ -5,7 +5,7 @@
 #| include: false
 #| echo: false
 
-query <- ""
+query <- "10.1002/alz.70712"
 bhelselR::fetch_pubmed(query)
 bhelselR::fetch_pubmed(query, output = "temp_references.bib", write = TRUE)
 ```

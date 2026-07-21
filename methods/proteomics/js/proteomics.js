@@ -110,7 +110,7 @@ async function SetTableTwo() {
 
 async function updateTableTwo() {
   const data2 = proteomics2[selectedWave2].filter(
-    (row) => row.Type === selectedType,
+    (row) => row.Type === "Plasma",
   );
 
   const columns = [

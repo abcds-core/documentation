@@ -7,12 +7,16 @@ book:
   date: "6/26/2026"
   chapters:
     - index.qmd
-    - clinical-core.qmd
-    - genomics.qmd
-    - pnt1.qmd
-    - p217.qmd
-    - proteomics.qmd
-    - faq.qmd
+    - methods/centiloid.qmd
+    - methods/clinical-core.qmd
+    - methods/csf/csf.qmd
+    - methods/genomics.qmd
+    - methods/metabolomics.qmd
+    - methods/pnt1.qmd
+    - methods/p217.qmd
+    - methods/proteomics/proteomics.qmd
+    - methods/safety-labs.qmd
+    - methods/faq.qmd
     - references.qmd
 
 bibliography: references.bib
@@ -26,8 +30,6 @@ format:
       text: |
         <link href="https://unpkg.com/tabulator-tables@6.3.0/dist/css/tabulator.min.css" rel="stylesheet">
         <script src="https://unpkg.com/tabulator-tables@6.3.0/dist/js/tabulator.min.js"></script>
-  pdf:
-    documentclass: scrreprt
 
 resources:
   - data/ProteomicsTableOne.json

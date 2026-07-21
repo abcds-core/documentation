@@ -1,0 +1,86 @@
+---
+toc: true
+bibliography: ../references.bib
+csl: ../american-medical-association-brackets.csl
+---
+
+# Centiloid
+
+Methods for A&beta; Centiloid Standardization
+
+**Authors** Amal Tiss, Ph.D.<sup>1</sup>, Julie Price, Ph.D.<sup>1</sup>, and Charles Laymon, Ph.D.<sup>2</sup>
+
+**Affiliations**
+
+1. Massachusetts General Hospital, Co-Investigators on ABC-DS
+2. University of Pittsburgh, Co-Investigators on ABC-DS
+
+**Summary (or Abstract): Centiloid Standardization**
+
+PET measures of amyloid-beta (A&beta;) load determined using two different A&beta; imaging
+agents, [<sup>11</sup>C]PiB (PiB) and [<sup>18</sup>F]Florbetapir (FBP) were
+standardized by Centiloid (CL) scaling.[@klunk2015centiloid] Regional PiB SUVR
+and FBP SUVR outcomes were linearly transformed to a CL scale based on PiB as
+reference standard. Centiloid values of 0 and 100 respectively correspond to
+“high-certainty” A&beta;-negative young healthy control (YC) subjects (≤45 years) and
+“typical” A&beta;-positive early/mid-stage Alzheimer’s disease (AD) patients.
+
+## Method
+
+**Original Methods**: The PET Image data were acquired over 50-70 minute
+post-injection interval[@keator2020down] and reconstructed into four, 5 minute
+frames. PET images were first preprocessed to correct for motion between frames.
+Images were realigned to the first image frame and averaged (over 50min-70min),
+to generate a mean realigned FBP image. Each participant’s MRI and mean PET
+images were then manually reoriented to the anterior commissure/ posterior
+commissioner line using Statistical Parametric Mapping 8 (SPM8). These images
+were then coregistered and normalized into MNI152 space according to the Klunk
+et al. Standard Centiloid methodology.[@klunk2015centiloid] Standard Centiloid
+Volume of Interests (VOIs) were downloaded from the Global Alzheimer’s
+Association Interactive Network (GAAIN) website 
+(<a href="www.GAAIN.org" target="_blank">www.GAAIN.org</a>). A𝛽-PET SUVR values
+(50-70 min post injection mark) were determined using the standard Centiloid
+cortex VOI that that was generated from areas with high A𝛽-load in Alzheimer’s:
+frontal, temporal, parietal cortices, precuneus, anterior striatum, and insular
+cortex. Whole cerebellum served as the reference regions in the SUVR
+calculations for both PiB and FBP. No Partial volume correction was performed.
+The PiB and FBP data were converted to Centiloids, using previously published
+methods.[@klunk2015centiloid; @navitsky2018standardization]
+
+**Update on February 10, 2026** The PiB and FBP data were originally processed using
+the standard CL process described above[@klunk2015centiloid;
+@navitsky2018standardization] with whole cerebellum as reference and use of
+standard set of CL regionsof- interest,[@klunk2015centiloid] with SUVR values
+determined from data acquired 50-70 minutes after tracer injection.
+
+As reported previously,[@landau2015measurement] reference region selection has a
+strong influence on the detection of FBP longitudinal change and reference
+regions that include subcortical white matter (WM) resulted in change measures
+that are more accurate than those determined with cerebellar or pons data alone.
+Therefore, FBP SUVR values were also computed using 2 types of WM reference
+regions: **[1]** the eroded cerebral WM and **[2]** a composite region composed
+of the eroded cerebral WM, the whole cerebellum, and the brainstem.
+
+An eroded cerebral WM mask was generated using the white matter probability map
+in the native MR space that was generated during the MNI normalization step of
+the standard centiloid pipeline. This map underwent Gaussian smoothing (8 mm)
+and thresholding (90%) to produce an eroded WM mask in the native MR
+space.[@mclachlan2024comparison] This was normalized to MNI template space using
+the same transformation applied to the MR image as part of the standard
+centiloid pipeline. Only cerebral WM voxels were included (i.e. excluded WM in
+cerebellum and brainstem). CL values were computed using higher level stepwise
+CL calibration[@klunk2015centiloid] based on the Navitsky GAAIN
+dataset,[@navitsky2018standardization] the standard CL cortex target regions,
+and the WM reference regions. The PiB images continue to be processed using the
+whole cerebellum as the reference region.
+
+An additional reference that is relevant for data preprocessing.[@luo2025development]
+
+**About the Authors**. This document was prepared by Brad Christian, Ph.D. at
+the University of Wisconsin-Madison. For more information please contact Dr.
+Christian by email at: <a href="mailto:bchristian@wisc.edu">bchristian@wisc.edu</a>
+
+**Notice**: This document is presented by the author(s) as a service to ABC-DS
+data users. However, users should be aware that no formal review process has
+vetted this document and that ABC-DS cannot guarantee the accuracy or utility of
+this document.
