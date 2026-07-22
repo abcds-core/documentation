@@ -1,0 +1,77 @@
+## Structural T1 MRI Processing in ABC-DS Using FreeSurfer Cross-Sectional and Longitudinal
+
+### Summary
+
+ABC-DS T1-weighted MRI scans were processed using the fully automated FreeSurfer
+v7.4.1 cross-sectional and longitudinal pipelines to derive cortical thickness
+and volumetric measurements. Input data consisted of DICOM images from the
+ABC-DS dataset, organized and converted in a standardized workflow and subjected
+to consistent quality control within a shared HPC environment.
+
+### Data Acquisition & Organization
+
+- DICOM Sorting: raw DICOM files were obtained from LONI. A centralized custom module in the Brickman Lab screened and parsed DICOM headers to extract:
+    - Patient name and/or patient ID
+    - Series Description
+    - Scan Date (as reported in the DICOM header; note that LONI applies date shifting as part of de-identification).
+
+  Based on these header fields, data were organized into subject_scandate
+  directory structures and corresponding session-level folders to maintain
+  consistency across all scans.
+
+- DICOM &rarr; NIfTI Conversion
+    - T1-weighted DICOM files were converted to NIfTI format using FreeSurfer’s mri_convert tool.
+    - Dcm2niix/1.0.20240202 was used as a fallback converter.
+    - The resulting T1 NIfTI files served as the standardized inputs for all quality-control procedures and FreeSurfer processing.
+
+### Quality Assessment of Raw T1 Images
+
+- Visual QC: a single trained reviewer visually inspected every T1-weighted scan for:
+    - Motion artifacts
+    - Noise-related issues
+    - Anatomical abnormalities
+    - Pathology indicators
+
+- Automated QC Metrics (MRIQC). MRIQC (https://github.com/nipreps/mriqc) was
+used to extract quantitative image-quality metrics, including motion-related
+measures that were used to compare motion levels between study groups.
+
+### FreeSurfer Processing
+
+- Version & References
+    - FreeSurfer v7.4.1 <a href="https://surfer.nmr.mgh.harvard.edu/fswiki/rel6downloads">https://surfer.nmr.mgh.harvard.edu/fswiki/rel6downloads</a>
+    - Standard methods described on the FreeSurfer wiki and related literature.
+
+- Pipeline Execution: all scans were first processed using the cross-sectional
+recon-all pipeline (<a href="https://surfer.nmr.mgh.harvard.edu/fswiki/recon-all">https://surfer.nmr.mgh.harvard.edu/fswiki/recon-all</a>),
+which includes:
+    - Motion correction
+    - Intensity normalization
+    - Skull stripping
+    - White-matter and pial surface reconstruction
+    - Subcortical segmentation
+    - Cortical parcellation (e.g., Desikan–Killiany atlas)
+
+- Participants with multiple timepoints were additionally processed using the
+FreeSurfer longitudinal stream, following the procedures described in:
+<a href="https://surfer.nmr.mgh.harvard.edu/fswiki/FsTutorial/LongitudinalTutorial">https://surfer.nmr.mgh.harvard.edu/fswiki/FsTutorial/LongitudinalTutorial</a>
+
+### Quality Assessment of FreeSurfer Outputs
+
+- Surface Inspection: reconstructed cortical surfaces (white and pial) were visually checked to report:
+    - Topological inaccuracies
+    - Misclassified tissue boundaries
+    - Over- or under-estimated surfaces
+- Automated FreeSurfer QA Tools (https://github.com/Deep-MI/fsqc)
+- Statistical Outlier Detection: all regional cortical thickness and volumetric
+measures were evaluated using z-score bands: −4, −3, −2, −1, 0, +1, +2, +3, +4.
+Outliers were flagged and re-examined as needed.
+
+- Notes
+    - All scans were processed within the same HPC environment.
+    - All QC procedures were performed by the same individual for consistency.
+
+**References**[@collins1994automatic; @dale1999cortical; @fischl1999cortical;
+@fischl1999high; @fischl2000measuring; @fischl2001automated;
+@n3_nonuniform_intensity_correction; @fischl2002whole; @fischl2004automatically;
+@reuter2011avoiding]

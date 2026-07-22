@@ -1,0 +1,93 @@
+## Diffusion Tensor Imaging Processing Using FreeSurfer’s dt_recon
+
+### Summary
+
+ABC-DS diffusion-weighted MRI scans were processed using the FreeSurfer dt_recon pipeline 
+(<a href="https://surfer.nmr.mgh.harvard.edu/fswiki/dt_recon">https://surfer.nmr.mgh.harvard.edu/fswiki/dt_recon</a>)
+to generate diffusion tensor maps, including fractional anisotropy (FA). Input
+data consisted of DICOM images from the ABC-DS dataset, organized through a
+standardized workflow and subjected to consistent raw-image and output QC within
+the shared HPC environment.
+
+### Data Acquisition & Organization
+
+- DICOM Sorting: raw DICOM files were obtained from LONI. A centralized custom
+module in the Brickman Lab screened and parsed DICOM headers to extract:
+    - Patient name and/or patient ID
+    - Series Description
+    - Scan Date (as reported in the DICOM header; note that LONI applies date shifting as part of de-identification
+- Data were organized into subject_scandate directory structures and
+corresponding session-level folders to maintain consistency across all scans.
+    - DICOM → NIfTI Conversion
+    - DTI/DWI DICOM files were converted to NIfTI using FreeSurfer’s mri_convert.
+    - Dcm2niix/1.0.20240202 was used as a fallback converter.
+    - NIfTI files served as the standardized inputs for all QC procedures and the FreeSurfer diffusion pipeline.
+
+### Quality Assessment of Raw DTI Images
+
+- Visual QC: a single trained reviewer visually inspected every DTI scan for:
+    - Motion
+    - Slice dropout
+    - Distortions
+    - Signal loss
+    - General acquisition artifacts
+- Motion, Eddy, and Susceptibility QC: processing followed a fixed sequence:
+    - Denoising using Patch2Self <a href="https://pubmed.ncbi.nlm.nih.gov/36543265/">https://pubmed.ncbi.nlm.nih.gov/36543265/</a> 
+    applied to all scans as the first step after visual QC.
+    - Susceptibility Distortion Correction (if AP/PA DTI are available): For
+    datasets containing opposing phase-encode (AP/PA) pairs, TOPUP 
+    (<a href="https://fsl.fmrib.ox.ac.uk/fsl/docs/diffusion/topup/index.html">https://fsl.fmrib.ox.ac.uk/fsl/docs/diffusion/topup/index.html</a>)
+    was applied to correct susceptibility-induced distortions.
+    - Motion + Eddy Current Correction
+      Completed through FreeSurfer’s dt_recon pipeline, which internally runs
+      FSL’s eddy correction routines. No external standalone eddy processing was
+      executed.
+
+### FreeSurfer DTI Processing Pipeline
+
+- Version & References
+    - FreeSurfer7.4.1 dt_recon <a href="https://surfer.nmr.mgh.harvard.edu/fswiki/dt_recon">https://surfer.nmr.mgh.harvard.edu/fswiki/dt_recon</a>
+    - The method aligns diffusion data to the subject’s T1 FreeSurfer
+    reconstruction directory, enabling surface-based and volumetric analyses.
+- Pipeline Execution: dt_recon performs:
+    - Motion and Eddy Correction (FSL-based)
+    - Tensor fitting.
+    - Registration of diffusion data to structural FreeSurfer space
+    - Generation of standard diffusion maps, including:
+        - Fractional Anisotropy (FA)
+        - apparent diffusion coefficient (ADC)
+        - Radial Diffusivity (RD)
+- dt_recon outputs DTI maps suitable for:
+    - Voxelwise analysis
+    - ROI-based analysis
+    - Surface-based diffusion analyses
+- Region of interest ROI analsysis
+    - All FA maps were registered to standard space using FMRIB58 template.
+    - FreeSurfer mri_segstats was used to extract:
+        - Regional and lobar FA metrics
+    - FA in major white-matter tracts was extracted using the JHU White Matter Atlas.
+
+### Quality Assessment of DTI Outputs
+
+FA and other diffusion metrics were screened using z-score bands: −4, −3, −2,
+−1, 0, +1, +2, +3, +4. Any regional outliers were flagged for review and
+re-evaluation.
+
+### Notes
+
+- All scans were processed within the same HPC environment used for the T1 analysis.
+- We did not report diffusivity (MD, AD, RD, ADC) measures because not all
+subjects had opposing phase-encode directions in the DTI acquisition. Upon
+visual inspection, cortical diffusivity appeared unreliable due to
+susceptibility artifacts. Therefore, we report only FA, as it is a more reliable
+measure in this dataset.
+- Due to errors reported in the orientation of the ICBM-DTI-81 atlas and its
+white-matter labels, the authors used the JHU white-matter tract atlas from FSL
+tools box instead.
+- All QC procedures (raw image QC and output QC) were performed by the same individual for methodological consistency.
+
+**References**[@rohlfing2013incorrect]
+
+- <a href="https://surfer.nmr.mgh.harvard.edu/fswiki/dt_recon" target="_blank">https://surfer.nmr.mgh.harvard.edu/fswiki/dt_recon</a>
+- <a href="https://surfer.nmr.mgh.harvard.edu/fswiki/FsTutorial/MultiModalDtiIndividual_tktools" target="_blank">https://surfer.nmr.mgh.harvard.edu/fswiki/FsTutorial/MultiModalDtiIndividual_tktools</a>
+- <a href="https://surfer.nmr.mgh.harvard.edu/fswiki/FsTutorial/Diffusion/DTIscripts" target="_blank">https://surfer.nmr.mgh.harvard.edu/fswiki/FsTutorial/Diffusion/DTIscripts</a>

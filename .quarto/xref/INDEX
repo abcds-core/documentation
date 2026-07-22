@@ -76,5 +76,8 @@
   },
   "methods/proteomics/proteomics.qmd": {
     "proteomics.html": "d19f2471"
+  },
+  "methods/mri/mri.qmd": {
+    "mri.html": "0ff54adf"
   }
 }

@@ -1,0 +1,87 @@
+## ASL Imaging Processing for Cerebral Blood Flow Quantification
+
+### Summary
+
+Cerebral Blood Flow (CBF) represents the volume of blood delivered to brain
+tissue per unit time, expressed in ml/100g/min. ASL-derived CBF is a sensitive
+physiological marker relevant to Alzheimer’s disease research in Down syndrome.
+Prior studies show that individuals with Down syndrome who develop Alzheimer’s
+disease exhibit significantly reduced CBF, with stronger declines in individuals
+with greater cognitive impairment and a nonlinear age effect indicating faster
+reductions after ~45 years of age. In the ABC-DS cohort, both 3D pulsed ASL
+(pASL) and 3D pseudo-continuous ASL (pCASL) were used to quantify CBF across
+participants.
+
+### MRI Data Acquisition & Organization
+
+- DICOM Sorting: raw DICOM files were obtained from LONI. A centralized custom
+  module in the Brickman Lab screened and parsed DICOM headers to extract:
+    - Patient name and/or patient ID
+    - Series Description
+    - Scan Date (as reported in the DICOM header; note that LONI applies date
+    shifting as part of de-identification).
+  Data were organized into subject_scandate directory structures and
+  corresponding session-level folders to maintain consistency across all scans.
+- DICOM &rarr; NIfTI Conversion
+    - ASL DICOM files were converted to NIfTI using dcm2niix/1.0.20240202.
+    - NIfTI files served as the standardized inputs for all QC procedures.
+- ASL Acquisition Protocols (ABCDS Study): ASL data in the ABC-DS cohort were acquired using two distinct protocols:
+    - pASL Acquisition (Siemens Prisma)
+        - TE = 16.02 ms
+        - TR = 5000 ms
+        - Flip angle = 180°
+        - Slice thickness = 4 mm
+        - Acquisition matrix = 448 × 448
+        - Data acquired in control–label pairs
+    - pCASL Acquisition (GE MR750)
+        - TE = 10.528 ms
+        - TR = 4888 ms
+        - Inversion time (TI) = 2025 ms
+        - Flip angle = 111°
+        - Slice thickness = 4 mm
+        - Acquisition matrix = 128 × 128
+        - Includes M0 image (proton density) and PWI (perfusion-weighted image)
+
+### Quality Assessment
+
+- Visual QC: all ASL volumes were visually inspected for:
+    - Motion artifacts
+    - Label–control misalignment
+    - Severe field inhomogeneity
+- Motion QC & Quantitative thresholds: For pASL data:
+    - Motion correction: FSL/6.0.7.16’s tool  mcflirt
+    - Outlier detection: FSL/6.0.7.16’s tool fsl_motion_outliers
+    - Quantitative exclusion thresholds (based on published literature) included
+    SNR (GM/WM) ≤ –2.3 or ≥ 3.4 and mean framewise displacement > 0.319. Volumes
+    failing these criteria were excluded.
+    - All data is processed regardless of QC status. The subject was labeled as
+    OK in the quality assessment report when visual inspection and quality
+    metrics were acceptable, or labeled as POOR (recommend exclusion) when
+    severe distortions were present that could affect the accuracy of
+    quantitative CBF.
+
+### ASL Data Processing 
+
+- Both pASL and pCASL datasets were processed using FSL/6.0.7.16’s oxford_asl,
+following the standardized quantification framework recommended in Alsop et al.
+(2015). Processing steps included:
+    - Control–label matching (for pASL) using zig-zag pattern detection
+    - If the M0 image was missing, an estimated M0 was computed from the average of the control images.
+- Registration to Structural T1: both pASL and pCASL CBF maps were registered to
+the participant’s T1-weighted anatomical scan using FreeSurfer bbregister
+(boundary-based registration) and masked using FreeSurfer brain masks to remove
+non-brain voxels.
+- Regional and Lobar CBF Extraction: using FreeSurfer anatomical parcellations:
+    - Desikan–Killiany atlas was applied to compute regional mean CBF values.
+    - Lobar summaries (frontal, temporal, parietal, occipital) were derived
+    using the corresponding atlas definitions.
+
+### Notes
+
+- Both pASL and pCASL adhere to the ASL white paper Alsop et al. (2015) / ISMRM consensus guidelines.
+- Quantification uses consistent physiological parameters across participants.
+- All QC and processing were performed in a unified HPC environment, using the same tools across the dataset.
+
+**References**[@rohlfing2013incorrect; @chappell2008variational;
+@groves2009combined; @chappell2010separation; @chappell2011partial;
+@chappell2013comparing; @alsop2015recommended; @almeida2018test]

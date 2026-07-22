@@ -1,0 +1,117 @@
+## Small Vessel Disease Markers: Enlarged Perivascular Spaces, Infarcts, and Microbleeds
+
+### Enlarged Perivascular Spaces and Infarcts
+
+1. **Overview**. We developed a lesion-classification algorithm based on anatomical
+location, T1 and T2 FLAIR signal characteristics, and lesion size to distinguish
+between enlarged perivascular spaces (PVS) and cavitated infarcts. PVS represent
+pathways for metabolic waste clearance that depend on vascular pulsatility. In
+adults with Down syndrome, enlarged PVS are consistently elevated across
+progressive Alzheimer’s disease (AD) diagnostic groups and emerge in the early
+30s, predating amyloid and tau PET abnormalities. Cavitated infarcts may arise
+from embolic events, small-artery occlusions, or large-vessel disease. In adults
+with Down syndrome, infarcts also appear at young ages and increase with
+advancing AD stage.
+
+2. **Imaging Characteristics and Rating Procedure**. PVS were first identified
+on T1-weighted MRI as sharply demarcated hypointense tubular or ovoid structures
+following the course of penetrating vessels. These findings were then
+cross-checked on T2 FLAIR: true PVS lack the hyperintense rim typical of
+infarcts. A visible hyperintense T2 FLAIR ring around a T1 hypointensity served
+as the primary criterion for labeling a lesion as a cavitated infarct. In
+regions where PVS are uncommon (e.g., brainstem, upper basal ganglia), the
+requirement for a FLAIR rim was relaxed. All images were reviewed in DICOM
+format using the RadiAnt viewer to ensure consistency in visualization.
+
+3. **Scoring and Quantification**. Enlarged PVS were scored across 13 predefined
+brain regions, each rated from 0 to 2 based on severity. Regional scores were
+summed to generate a global PVS score ranging from 0 (none) to 26 (maximum
+severity). Infarcts were rated on T2 FLAIR as discrete hypointense cavities > 5
+mm with partial or complete hyperintense rims and confirmed on T1 as hypointense
+lesions. Due to a highly skewed distribution, infarcts were categorized simply
+as present or absent.
+
+4. **Acquisition Summary**. T1-weighted scans were primarily acquired on a
+Siemens Prisma scanner with TR values between 6.8–2300 ms, TE values of
+2.95–3.55 ms, inversion times (TI) of 400 or 900 ms, flip angles of 7°–11°, and
+slice thicknesses of 1.0–1.2 mm. FLAIR scans were acquired on the same platform
+with TR values of 4800 or 5000 ms, TE values of 110.8–441 ms, TI values between
+1372–1800 ms, flip angles of 90° or 120°, and slice thicknesses of 0.9–1.2 mm.
+
+### Cerebral Microbleeds
+
+1. **Overview**. Cerebral microbleeds (CMBs) are small foci of chronic blood
+product deposition and are closely associated with cerebral amyloid angiopathy
+(CAA) and Alzheimer’s disease pathology. In Down syndrome, CMBs increase in
+frequency across progressive AD diagnostic stages and typically appear in the
+mid-30s, coinciding with early parenchymal amyloid and tau abnormalities.
+
+2. **Imaging Acquisition**. T2*-weighted sequences—including Gradient-Recalled
+Echo (GRE), Susceptibility-Weighted Imaging (SWI), and T2-star sequences—were
+used for microbleed detection. Most scans were acquired on a Siemens Prisma
+scanner with TR = 27–28 ms, TE = 6.7–20 ms, flip angle = 20°, and slice
+thickness = 1.5–4.0 mm.
+
+3. **Quality Assessment**. An annual quality review was conducted to evaluate
+motion-related blurring, slice coverage, and overall image integrity. Raw DICOM
+data were converted to NIfTI format using Freesurfers’s mri_convert. Scans were
+excluded if:
+
+    - Motion artifacts substantially impaired visualization.
+    - Fewer than 50 axial slices were available (to ensure adequate brain coverage).
+
+    Visual QC assessed sharpness, susceptibility artifacts, and contrast sufficient
+    for detecting paramagnetic signal voids. 
+
+4. **Microbleed Identification**. CMBs were identified using Greenberg criteria,
+, as summarized in the table below, which define microbleeds as:
+
+    - Small, round or ovoid hypointense signal voids on T2*-weighted images
+    - Surrounded by brain parenchyma (not contiguous with vessels or bone)
+    - Demonstrating a blooming effect consistent with hemosiderin deposition
+    - Lacking hyperintense components on T2* (helping to distinguish them from cavernomas and other mimics)
+    - Paramagnetic substances such as calcifications or iron deposits were considered 
+    as possible mimics and excluded based on characteristic appearance.
+
+
+<table id="csf-table" style="width: 75%; margin: 0 auto;">
+<thead>
+<tr>
+    <th>Recommended Criteria for CMB Identification</th>
+</tr>
+</thead>
+<tr>
+    <td>1. Black on T2*-weighted MRI</td>
+</tr>
+<tr>
+    <td>2. Round or ovoid (rather than linear)</td>
+</tr>
+<tr>
+    <td>3. Blooming on T2*-weighted MRI</td>
+</tr>
+<tr>
+    <td>4. Devoid of signal hyperintensity on T1- or T2-weighted sequences</td>
+</tr>
+<tr>
+    <td>5. At least half surrounded by brain parenchyma</td>
+</tr>
+<tr>
+    <td>6. Distinct from other potential mimics such as iron/calcium deposits, bone, or vessel flow voids</td>
+</tr>
+<tr>
+    <td>7. Clinical history excluding traumatic diffuse axonal injury</td>
+</tr>
+</table>
+
+<br>
+
+
+5. **Scoring and Quantification**. Because the distribution of CMBs was highly
+skewed, most participants having either none or a single lesion, microbleeds
+were recorded as present or absent at the whole-brain level. Regional
+assessments were performed across the frontal, temporal, parietal, and occipital
+lobes, as well as the basal ganglia, brainstem, and cerebellum. Total CMB counts
+were then documented for each participant.
+
+**References**[@chesebro2021automated; @lao2020alzheimer;
+@lao2024cerebrovascular; @ramirez2016imaging; @zhu2010severity]

@@ -1,0 +1,53 @@
+---
+toc: true
+bibliography: ../../references.bib
+csl: ../../american-medical-association-brackets.csl
+---
+
+# MRI
+
+**Magnetic Resonance Imaging**
+
+**Authors** Mohamad J Alshikho<sup>1, 2</sup>, Bradley T Christian<sup>3</sup>, and Adam M Brickman<sup>1, 2</sup>
+
+1. Taub Institute for Research on Alzheimer's Disease and the Aging Brain,
+College of Physicians and Surgeons, Columbia University. 630 West 168 Street,
+New York, NY 10032.
+2. Department of Neurology, Vagelos College of Physicians and Surgeons Columbia
+University New York NY USA.
+3. Waisman Center, University of Wisconsin-Madison, Madison, Wisconsin, USA.
+
+<hr/>
+
+{{< include sections/structural.qmd >}}
+
+{{< include sections/flair.qmd >}}
+
+{{< include sections/dti.qmd >}}
+
+{{< include sections/asl.qmd >}}
+
+{{< include sections/microbleeds.qmd >}}
+
+<hr/>
+
+**Computing Environment**
+
+- System
+    - OS: Debian GNU/Linux 12 (bookworm)
+    - Kernel: Linux 6.1.0-28-amd64
+    - Architecture: x86-64
+    - Hostname: brickmanlogin
+- Hardware
+    - Server: Supermicro SYS-1028R-WTNRT
+    - Firmware: v3.1c
+    - Platform: Columbia University / Brickman Lab/ HPC
+- Build Information
+    - Build Date: Nov 22, 2024
+    - Debian build: 6.1.119-1
+
+**Authors**. This document was prepared by Dr. Alshikho and Dr. Brickman from
+Columbia University, together with Dr. Christian from the Waisman Center at the
+University of Wisconsin. For more information, please contact Dr. Brickman at 
+<a href="mailto:amb2139@cumc.columbia.edu">amb2139@cumc.columbia.edu</a> or Dr.
+Christian at <a href="mailto:bchristian@wisc.edu">bchristian@wisc.edu</a>.

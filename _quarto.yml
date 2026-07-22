@@ -12,6 +12,7 @@ book:
     - methods/csf/csf.qmd
     - methods/genomics.qmd
     - methods/metabolomics.qmd
+    - methods/mri/mri.qmd
     - methods/pnt1.qmd
     - methods/p217.qmd
     - methods/proteomics/proteomics.qmd

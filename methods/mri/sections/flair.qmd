@@ -1,0 +1,127 @@
+## White Matter Hyperintensity Segmentation from Fluid-Attenuated Inversion Recovery MRI
+
+### Summary
+
+White matter hyperintensities (WMH) were segmented from FLAIR MRI using the
+ASWMH (Automated Segmentation of White Matter Hyperintensities) in-house tool
+(US patent: US9867566B2). ASWMH was developed and validated in the Brickman Lab
+and supports high-throughput processing, including parallel execution on HPC
+environments. This pipeline generates WMH probability maps, refined binary
+lesion masks, and total WMH volume (cm³) after comprehensive preprocessing,
+intensity normalization, adaptive thresholding, and shape-based refinement.
+
+### Data Acquisition & Organization
+
+- DICOM Sorting: raw FLAIR DICOMs were downloaded from LONI and processed using
+the same centralized module used for T1/DTI datasets. DICOM headers were parsed
+to extract:
+    - Patient name and/or patient ID
+    - Series Description
+    - Scan Date (as reported in the DICOM header; note that LONI applies date
+    shifting as part of de-identification). 
+- Data were organized into subject_scandate and session-level folders to
+maintain consistent structure across scans.
+    - DICOM → NIfTI Conversion
+    - FLAIR DICOMs were converted to NIfTI format using FreeSurfer mri_convert.
+    - Converted NIfTI files served as inputs for QC and ASWMH processing.
+
+### Quality Assessment of Raw FLAIR Images
+
+- Visual QC: each FLAIR image underwent manual visual QC to assess:
+    - Motion artifacts
+    - Ghosting or streaking
+    - Signal loss or dropout
+    - Fat-saturation or inversion issues
+    - Field inhomogeneity
+    - Severe white-matter pathology or atypical patterns
+- Image Property Verification: before segmentation, image properties were verified and recorded:
+    - Voxel dimensions
+    - Image orientation
+    - Slice thickness
+    - Field-of-view
+    - Matrix size
+
+ASWMH standardizes all inputs to 256 × 256 × 256 with 1 mm³ isotropic voxels to eliminate dimensional variability in downstream segmentation.
+
+### Processing Pipeline
+
+- Preprocessing and Standardization: ASWMH accepts DICOM or NIfTI inputs and performs:
+    - Resampling and conforming to a 256×256×256 matrix
+    - Voxel size standardization to 1 mm³ isotropic
+    - Reorientation to MNI152 template space
+    - Brain extraction using FreeSurfer’s mri_synthstrip
+  This ensures anatomical consistency across images from different scanners and protocols.
+  
+- Bias Field Correction and Intensity Normalization: 
+    - Bias field correction is applied using MNI’s N3 algorithm
+    (mri_nu_correct.mni <a href="http://www.bic.mni.mcgill.ca/software/N3">http://www.bic.mni.mcgill.ca/software/N3</a>),
+    chosen because of:
+        - More stable performance across multi-scanner datasets
+        - Better intensity uniformity compared to N4 in empirical tests
+    - After N3 correction, histogram-based mapping rescales intensities to the 0–255 grayscale range.
+
+- White Matter Mask Generation: White-matter masks are derived from FreeSurfer7.4.10 mri_synthseg segmentations:
+    - Label 2 = Left cerebral white matter
+    - Label 41 = Right cerebral white matter
+  These masks are refined with morphological hole-filling and used to constrain
+  all segmentation steps to white matter only. 
+
+- Adaptive Thresholding and GMM Initialization
+  
+  A custom ASWMH2.5.6 module computes data-driven percentile thresholds from
+  each scan’s FLAIR intensity histogram. This module analyzes the upper tail of
+  the FLAIR brightness distribution, identifies subject-specific hyperintensity
+  ranges and avoids single fixed cutoffs.
+
+  These thresholds initialize a two-component Gaussian Mixture Model (GMM)
+  within the white-matter mask. The two GMM components correspond to WMH-like
+  high-intensity voxels and background / non-WMH white matter voxels. Posterior
+  probabilities for each voxel are computed, forming the initial WMH probability
+  map.
+
+- Shape-Based Refinement
+  
+  To reduce false positives, ASWMH incorporates shape features (brightness
+  ratio, elongation and sphericity). These features suppress vessels, noise
+  spikes, and partial-volume artifacts.
+
+- Edge-Based Refinement
+
+  The Roberts edge detector (scikit-image
+  <a href="https://scikit-image.org/docs/0.25.x/auto_examples/edges/plot_edge_filter.html" target="_blank">https://scikit-image.org/docs/0.25.x/auto_examples/edges/plot_edge_filter.html</a>)
+  is applied in the axial plane to refine lesion boundaries. This step reduces
+  spillover into cortex or CSF, sharpens lesion borders and eliminates
+  peripheral distortions not removed by the WM mask alone. The result is a
+  refined WMH probability map.
+
+- Registration to MNI Space
+  
+  Following segmentation refinement, the standardized FLAIR image and
+  corresponding WMH mask were registered to the MNI152 template using
+  FSL/6.0.7.16 registration tools.
+
+- Final WMH Volume Computation
+  
+  Final WMH volume (cm³) was computed by summing all voxels labeled as WMH and
+  multiplying by the voxel volume (1 mm³). Regional and lobar WMH volumes
+  (frontal, temporal, parietal, occipital) were extracted using
+  FreeSurfer7.4.1’s mri_segstats, applied to the MNI-registered WMH mask and
+  corresponding lobar anatomical labels.
+
+### Output QC
+
+WMH output quality control was performed through visual inspection of the final
+segmentation overlays. ASWMH additionally generated HTML quality-assessment
+reports that display labeled and unlabeled FLAIR slices side-by-side, providing
+comprehensive snapshots of segmentation performance. Flagged cases underwent
+re-inspection and manual review.
+
+### Notes
+
+- All scans were processed within the same HPC environment used for the T1 analysis.
+- All processing steps described above are summarized in the schematic workflow shown in the illustration below.
+
+<img src="../../images/wmh_mri_pipeline.png"/ width="100%">
+
+**References**[@edwards2025alzheimer; @hoopes2022synthstrip;
+@billot2023synthseg; @rorden2024improving]

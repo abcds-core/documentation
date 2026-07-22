@@ -1,0 +1,1279 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.9.36">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>6&nbsp; MRI – Documentation</title>
+<style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
+
+
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<link href="../../methods/pnt1.html" rel="next">
+<link href="../../methods/metabolomics.html" rel="prev">
+<script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-845c23b38eaddc0f92fda52bfe77a8c8.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap-e0a1fc9f2a99d3ab40bcb41ef70ba703.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+<link href="https://unpkg.com/tabulator-tables@6.3.0/dist/css/tabulator.min.css" rel="stylesheet">
+<script src="https://unpkg.com/tabulator-tables@6.3.0/dist/js/tabulator.min.js"></script>
+
+
+</head>
+
+<body class="nav-sidebar floating quarto-light">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../methods/mri/mri.html"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">MRI</span></a></li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+      <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+    <div class="sidebar-title mb-0 py-0">
+      <a href="../../">Documentation</a> 
+    </div>
+      </div>
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Preface</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../methods/centiloid.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Centiloid</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../methods/clinical-core.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Clinical Core Methods</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../methods/csf/csf.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Cerebrospinal Fluid (CSF)</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../methods/genomics.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Genomic Data</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../methods/metabolomics.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Metabolomics</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../methods/mri/mri.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">MRI</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../methods/pnt1.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Plasma NT1-tau in ABC-DS</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../methods/p217.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Plasma P-tau217</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../methods/proteomics/proteomics.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Proteomics</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../methods/safety-labs.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Safety Indicators</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../methods/faq.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Frequently Asked Questions</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../references.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">References</span></a>
+  </div>
+</li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#structural-t1-mri-processing-in-abc-ds-using-freesurfer-cross-sectional-and-longitudinal" id="toc-structural-t1-mri-processing-in-abc-ds-using-freesurfer-cross-sectional-and-longitudinal" class="nav-link active" data-scroll-target="#structural-t1-mri-processing-in-abc-ds-using-freesurfer-cross-sectional-and-longitudinal"><span class="header-section-number">6.1</span> Structural T1 MRI Processing in ABC-DS Using FreeSurfer Cross-Sectional and Longitudinal</a>
+  <ul class="collapse">
+  <li><a href="#summary" id="toc-summary" class="nav-link" data-scroll-target="#summary"><span class="header-section-number">6.1.1</span> Summary</a></li>
+  <li><a href="#data-acquisition-organization" id="toc-data-acquisition-organization" class="nav-link" data-scroll-target="#data-acquisition-organization"><span class="header-section-number">6.1.2</span> Data Acquisition &amp; Organization</a></li>
+  <li><a href="#quality-assessment-of-raw-t1-images" id="toc-quality-assessment-of-raw-t1-images" class="nav-link" data-scroll-target="#quality-assessment-of-raw-t1-images"><span class="header-section-number">6.1.3</span> Quality Assessment of Raw T1 Images</a></li>
+  <li><a href="#freesurfer-processing" id="toc-freesurfer-processing" class="nav-link" data-scroll-target="#freesurfer-processing"><span class="header-section-number">6.1.4</span> FreeSurfer Processing</a></li>
+  <li><a href="#quality-assessment-of-freesurfer-outputs" id="toc-quality-assessment-of-freesurfer-outputs" class="nav-link" data-scroll-target="#quality-assessment-of-freesurfer-outputs"><span class="header-section-number">6.1.5</span> Quality Assessment of FreeSurfer Outputs</a></li>
+  </ul></li>
+  <li><a href="#white-matter-hyperintensity-segmentation-from-fluid-attenuated-inversion-recovery-mri" id="toc-white-matter-hyperintensity-segmentation-from-fluid-attenuated-inversion-recovery-mri" class="nav-link" data-scroll-target="#white-matter-hyperintensity-segmentation-from-fluid-attenuated-inversion-recovery-mri"><span class="header-section-number">6.2</span> White Matter Hyperintensity Segmentation from Fluid-Attenuated Inversion Recovery MRI</a>
+  <ul class="collapse">
+  <li><a href="#summary-1" id="toc-summary-1" class="nav-link" data-scroll-target="#summary-1"><span class="header-section-number">6.2.1</span> Summary</a></li>
+  <li><a href="#data-acquisition-organization-1" id="toc-data-acquisition-organization-1" class="nav-link" data-scroll-target="#data-acquisition-organization-1"><span class="header-section-number">6.2.2</span> Data Acquisition &amp; Organization</a></li>
+  <li><a href="#quality-assessment-of-raw-flair-images" id="toc-quality-assessment-of-raw-flair-images" class="nav-link" data-scroll-target="#quality-assessment-of-raw-flair-images"><span class="header-section-number">6.2.3</span> Quality Assessment of Raw FLAIR Images</a></li>
+  <li><a href="#processing-pipeline" id="toc-processing-pipeline" class="nav-link" data-scroll-target="#processing-pipeline"><span class="header-section-number">6.2.4</span> Processing Pipeline</a></li>
+  <li><a href="#output-qc" id="toc-output-qc" class="nav-link" data-scroll-target="#output-qc"><span class="header-section-number">6.2.5</span> Output QC</a></li>
+  <li><a href="#notes" id="toc-notes" class="nav-link" data-scroll-target="#notes"><span class="header-section-number">6.2.6</span> Notes</a></li>
+  </ul></li>
+  <li><a href="#diffusion-tensor-imaging-processing-using-freesurfers-dt_recon" id="toc-diffusion-tensor-imaging-processing-using-freesurfers-dt_recon" class="nav-link" data-scroll-target="#diffusion-tensor-imaging-processing-using-freesurfers-dt_recon"><span class="header-section-number">6.3</span> Diffusion Tensor Imaging Processing Using FreeSurfer’s dt_recon</a>
+  <ul class="collapse">
+  <li><a href="#summary-2" id="toc-summary-2" class="nav-link" data-scroll-target="#summary-2"><span class="header-section-number">6.3.1</span> Summary</a></li>
+  <li><a href="#data-acquisition-organization-2" id="toc-data-acquisition-organization-2" class="nav-link" data-scroll-target="#data-acquisition-organization-2"><span class="header-section-number">6.3.2</span> Data Acquisition &amp; Organization</a></li>
+  <li><a href="#quality-assessment-of-raw-dti-images" id="toc-quality-assessment-of-raw-dti-images" class="nav-link" data-scroll-target="#quality-assessment-of-raw-dti-images"><span class="header-section-number">6.3.3</span> Quality Assessment of Raw DTI Images</a></li>
+  <li><a href="#freesurfer-dti-processing-pipeline" id="toc-freesurfer-dti-processing-pipeline" class="nav-link" data-scroll-target="#freesurfer-dti-processing-pipeline"><span class="header-section-number">6.3.4</span> FreeSurfer DTI Processing Pipeline</a></li>
+  <li><a href="#quality-assessment-of-dti-outputs" id="toc-quality-assessment-of-dti-outputs" class="nav-link" data-scroll-target="#quality-assessment-of-dti-outputs"><span class="header-section-number">6.3.5</span> Quality Assessment of DTI Outputs</a></li>
+  <li><a href="#notes-1" id="toc-notes-1" class="nav-link" data-scroll-target="#notes-1"><span class="header-section-number">6.3.6</span> Notes</a></li>
+  </ul></li>
+  <li><a href="#asl-imaging-processing-for-cerebral-blood-flow-quantification" id="toc-asl-imaging-processing-for-cerebral-blood-flow-quantification" class="nav-link" data-scroll-target="#asl-imaging-processing-for-cerebral-blood-flow-quantification"><span class="header-section-number">6.4</span> ASL Imaging Processing for Cerebral Blood Flow Quantification</a>
+  <ul class="collapse">
+  <li><a href="#summary-3" id="toc-summary-3" class="nav-link" data-scroll-target="#summary-3"><span class="header-section-number">6.4.1</span> Summary</a></li>
+  <li><a href="#mri-data-acquisition-organization" id="toc-mri-data-acquisition-organization" class="nav-link" data-scroll-target="#mri-data-acquisition-organization"><span class="header-section-number">6.4.2</span> MRI Data Acquisition &amp; Organization</a></li>
+  <li><a href="#quality-assessment" id="toc-quality-assessment" class="nav-link" data-scroll-target="#quality-assessment"><span class="header-section-number">6.4.3</span> Quality Assessment</a></li>
+  <li><a href="#asl-data-processing" id="toc-asl-data-processing" class="nav-link" data-scroll-target="#asl-data-processing"><span class="header-section-number">6.4.4</span> ASL Data Processing</a></li>
+  <li><a href="#notes-2" id="toc-notes-2" class="nav-link" data-scroll-target="#notes-2"><span class="header-section-number">6.4.5</span> Notes</a></li>
+  </ul></li>
+  <li><a href="#small-vessel-disease-markers-enlarged-perivascular-spaces-infarcts-and-microbleeds" id="toc-small-vessel-disease-markers-enlarged-perivascular-spaces-infarcts-and-microbleeds" class="nav-link" data-scroll-target="#small-vessel-disease-markers-enlarged-perivascular-spaces-infarcts-and-microbleeds"><span class="header-section-number">6.5</span> Small Vessel Disease Markers: Enlarged Perivascular Spaces, Infarcts, and Microbleeds</a>
+  <ul class="collapse">
+  <li><a href="#enlarged-perivascular-spaces-and-infarcts" id="toc-enlarged-perivascular-spaces-and-infarcts" class="nav-link" data-scroll-target="#enlarged-perivascular-spaces-and-infarcts"><span class="header-section-number">6.5.1</span> Enlarged Perivascular Spaces and Infarcts</a></li>
+  <li><a href="#cerebral-microbleeds" id="toc-cerebral-microbleeds" class="nav-link" data-scroll-target="#cerebral-microbleeds"><span class="header-section-number">6.5.2</span> Cerebral Microbleeds</a></li>
+  </ul></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">MRI</span></h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<p><strong>Magnetic Resonance Imaging</strong></p>
+<p><strong>Authors</strong> Mohamad J Alshikho<sup>1, 2</sup>, Bradley T Christian<sup>3</sup>, and Adam M Brickman<sup>1, 2</sup></p>
+<ol type="1">
+<li>Taub Institute for Research on Alzheimer’s Disease and the Aging Brain, College of Physicians and Surgeons, Columbia University. 630 West 168 Street, New York, NY 10032.</li>
+<li>Department of Neurology, Vagelos College of Physicians and Surgeons Columbia University New York NY USA.</li>
+<li>Waisman Center, University of Wisconsin-Madison, Madison, Wisconsin, USA.</li>
+</ol>
+<hr>
+<section id="structural-t1-mri-processing-in-abc-ds-using-freesurfer-cross-sectional-and-longitudinal" class="level2" data-number="6.1">
+<h2 data-number="6.1" class="anchored" data-anchor-id="structural-t1-mri-processing-in-abc-ds-using-freesurfer-cross-sectional-and-longitudinal"><span class="header-section-number">6.1</span> Structural T1 MRI Processing in ABC-DS Using FreeSurfer Cross-Sectional and Longitudinal</h2>
+<section id="summary" class="level3" data-number="6.1.1">
+<h3 data-number="6.1.1" class="anchored" data-anchor-id="summary"><span class="header-section-number">6.1.1</span> Summary</h3>
+<p>ABC-DS T1-weighted MRI scans were processed using the fully automated FreeSurfer v7.4.1 cross-sectional and longitudinal pipelines to derive cortical thickness and volumetric measurements. Input data consisted of DICOM images from the ABC-DS dataset, organized and converted in a standardized workflow and subjected to consistent quality control within a shared HPC environment.</p>
+</section>
+<section id="data-acquisition-organization" class="level3" data-number="6.1.2">
+<h3 data-number="6.1.2" class="anchored" data-anchor-id="data-acquisition-organization"><span class="header-section-number">6.1.2</span> Data Acquisition &amp; Organization</h3>
+<ul>
+<li><p>DICOM Sorting: raw DICOM files were obtained from LONI. A centralized custom module in the Brickman Lab screened and parsed DICOM headers to extract:</p>
+<ul>
+<li>Patient name and/or patient ID</li>
+<li>Series Description</li>
+<li>Scan Date (as reported in the DICOM header; note that LONI applies date shifting as part of de-identification).</li>
+</ul>
+<p>Based on these header fields, data were organized into subject_scandate directory structures and corresponding session-level folders to maintain consistency across all scans.</p></li>
+<li><p>DICOM → NIfTI Conversion</p>
+<ul>
+<li>T1-weighted DICOM files were converted to NIfTI format using FreeSurfer’s mri_convert tool.</li>
+<li>Dcm2niix/1.0.20240202 was used as a fallback converter.</li>
+<li>The resulting T1 NIfTI files served as the standardized inputs for all quality-control procedures and FreeSurfer processing.</li>
+</ul></li>
+</ul>
+</section>
+<section id="quality-assessment-of-raw-t1-images" class="level3" data-number="6.1.3">
+<h3 data-number="6.1.3" class="anchored" data-anchor-id="quality-assessment-of-raw-t1-images"><span class="header-section-number">6.1.3</span> Quality Assessment of Raw T1 Images</h3>
+<ul>
+<li>Visual QC: a single trained reviewer visually inspected every T1-weighted scan for:
+<ul>
+<li>Motion artifacts</li>
+<li>Noise-related issues</li>
+<li>Anatomical abnormalities</li>
+<li>Pathology indicators</li>
+</ul></li>
+<li>Automated QC Metrics (MRIQC). MRIQC (https://github.com/nipreps/mriqc) was used to extract quantitative image-quality metrics, including motion-related measures that were used to compare motion levels between study groups.</li>
+</ul>
+</section>
+<section id="freesurfer-processing" class="level3" data-number="6.1.4">
+<h3 data-number="6.1.4" class="anchored" data-anchor-id="freesurfer-processing"><span class="header-section-number">6.1.4</span> FreeSurfer Processing</h3>
+<ul>
+<li>Version &amp; References
+<ul>
+<li>FreeSurfer v7.4.1 <a href="https://surfer.nmr.mgh.harvard.edu/fswiki/rel6downloads">https://surfer.nmr.mgh.harvard.edu/fswiki/rel6downloads</a></li>
+<li>Standard methods described on the FreeSurfer wiki and related literature.</li>
+</ul></li>
+<li>Pipeline Execution: all scans were first processed using the cross-sectional recon-all pipeline (<a href="https://surfer.nmr.mgh.harvard.edu/fswiki/recon-all">https://surfer.nmr.mgh.harvard.edu/fswiki/recon-all</a>), which includes:
+<ul>
+<li>Motion correction</li>
+<li>Intensity normalization</li>
+<li>Skull stripping</li>
+<li>White-matter and pial surface reconstruction</li>
+<li>Subcortical segmentation</li>
+<li>Cortical parcellation (e.g., Desikan–Killiany atlas)</li>
+</ul></li>
+<li>Participants with multiple timepoints were additionally processed using the FreeSurfer longitudinal stream, following the procedures described in: <a href="https://surfer.nmr.mgh.harvard.edu/fswiki/FsTutorial/LongitudinalTutorial">https://surfer.nmr.mgh.harvard.edu/fswiki/FsTutorial/LongitudinalTutorial</a></li>
+</ul>
+</section>
+<section id="quality-assessment-of-freesurfer-outputs" class="level3" data-number="6.1.5">
+<h3 data-number="6.1.5" class="anchored" data-anchor-id="quality-assessment-of-freesurfer-outputs"><span class="header-section-number">6.1.5</span> Quality Assessment of FreeSurfer Outputs</h3>
+<ul>
+<li><p>Surface Inspection: reconstructed cortical surfaces (white and pial) were visually checked to report:</p>
+<ul>
+<li>Topological inaccuracies</li>
+<li>Misclassified tissue boundaries</li>
+<li>Over- or under-estimated surfaces</li>
+</ul></li>
+<li><p>Automated FreeSurfer QA Tools (https://github.com/Deep-MI/fsqc)</p></li>
+<li><p>Statistical Outlier Detection: all regional cortical thickness and volumetric measures were evaluated using z-score bands: −4, −3, −2, −1, 0, +1, +2, +3, +4. Outliers were flagged and re-examined as needed.</p></li>
+<li><p>Notes</p>
+<ul>
+<li>All scans were processed within the same HPC environment.</li>
+<li>All QC procedures were performed by the same individual for consistency.</li>
+</ul></li>
+</ul>
+<p><strong>References</strong><span class="citation" data-cites="collins1994automatic dale1999cortical fischl1999cortical fischl1999high fischl2000measuring fischl2001automated n3_nonuniform_intensity_correction fischl2002whole fischl2004automatically reuter2011avoiding"><sup>[<a href="../../references.html#ref-collins1994automatic" role="doc-biblioref"><strong>1</strong></a>–<a href="../../references.html#ref-reuter2011avoiding" role="doc-biblioref"><strong>10</strong></a>]</sup></span></p>
+</section>
+</section>
+<section id="white-matter-hyperintensity-segmentation-from-fluid-attenuated-inversion-recovery-mri" class="level2" data-number="6.2">
+<h2 data-number="6.2" class="anchored" data-anchor-id="white-matter-hyperintensity-segmentation-from-fluid-attenuated-inversion-recovery-mri"><span class="header-section-number">6.2</span> White Matter Hyperintensity Segmentation from Fluid-Attenuated Inversion Recovery MRI</h2>
+<section id="summary-1" class="level3" data-number="6.2.1">
+<h3 data-number="6.2.1" class="anchored" data-anchor-id="summary-1"><span class="header-section-number">6.2.1</span> Summary</h3>
+<p>White matter hyperintensities (WMH) were segmented from FLAIR MRI using the ASWMH (Automated Segmentation of White Matter Hyperintensities) in-house tool (US patent: US9867566B2). ASWMH was developed and validated in the Brickman Lab and supports high-throughput processing, including parallel execution on HPC environments. This pipeline generates WMH probability maps, refined binary lesion masks, and total WMH volume (cm³) after comprehensive preprocessing, intensity normalization, adaptive thresholding, and shape-based refinement.</p>
+</section>
+<section id="data-acquisition-organization-1" class="level3" data-number="6.2.2">
+<h3 data-number="6.2.2" class="anchored" data-anchor-id="data-acquisition-organization-1"><span class="header-section-number">6.2.2</span> Data Acquisition &amp; Organization</h3>
+<ul>
+<li>DICOM Sorting: raw FLAIR DICOMs were downloaded from LONI and processed using the same centralized module used for T1/DTI datasets. DICOM headers were parsed to extract:
+<ul>
+<li>Patient name and/or patient ID</li>
+<li>Series Description</li>
+<li>Scan Date (as reported in the DICOM header; note that LONI applies date shifting as part of de-identification).</li>
+</ul></li>
+<li>Data were organized into subject_scandate and session-level folders to maintain consistent structure across scans.
+<ul>
+<li>DICOM → NIfTI Conversion</li>
+<li>FLAIR DICOMs were converted to NIfTI format using FreeSurfer mri_convert.</li>
+<li>Converted NIfTI files served as inputs for QC and ASWMH processing.</li>
+</ul></li>
+</ul>
+</section>
+<section id="quality-assessment-of-raw-flair-images" class="level3" data-number="6.2.3">
+<h3 data-number="6.2.3" class="anchored" data-anchor-id="quality-assessment-of-raw-flair-images"><span class="header-section-number">6.2.3</span> Quality Assessment of Raw FLAIR Images</h3>
+<ul>
+<li>Visual QC: each FLAIR image underwent manual visual QC to assess:
+<ul>
+<li>Motion artifacts</li>
+<li>Ghosting or streaking</li>
+<li>Signal loss or dropout</li>
+<li>Fat-saturation or inversion issues</li>
+<li>Field inhomogeneity</li>
+<li>Severe white-matter pathology or atypical patterns</li>
+</ul></li>
+<li>Image Property Verification: before segmentation, image properties were verified and recorded:
+<ul>
+<li>Voxel dimensions</li>
+<li>Image orientation</li>
+<li>Slice thickness</li>
+<li>Field-of-view</li>
+<li>Matrix size</li>
+</ul></li>
+</ul>
+<p>ASWMH standardizes all inputs to 256 × 256 × 256 with 1 mm³ isotropic voxels to eliminate dimensional variability in downstream segmentation.</p>
+</section>
+<section id="processing-pipeline" class="level3" data-number="6.2.4">
+<h3 data-number="6.2.4" class="anchored" data-anchor-id="processing-pipeline"><span class="header-section-number">6.2.4</span> Processing Pipeline</h3>
+<ul>
+<li><p>Preprocessing and Standardization: ASWMH accepts DICOM or NIfTI inputs and performs:</p>
+<ul>
+<li>Resampling and conforming to a 256×256×256 matrix</li>
+<li>Voxel size standardization to 1 mm³ isotropic</li>
+<li>Reorientation to MNI152 template space</li>
+<li>Brain extraction using FreeSurfer’s mri_synthstrip This ensures anatomical consistency across images from different scanners and protocols.</li>
+</ul></li>
+<li><p>Bias Field Correction and Intensity Normalization:</p>
+<ul>
+<li>Bias field correction is applied using MNI’s N3 algorithm (mri_nu_correct.mni <a href="http://www.bic.mni.mcgill.ca/software/N3">http://www.bic.mni.mcgill.ca/software/N3</a>), chosen because of:
+<ul>
+<li>More stable performance across multi-scanner datasets</li>
+<li>Better intensity uniformity compared to N4 in empirical tests</li>
+</ul></li>
+<li>After N3 correction, histogram-based mapping rescales intensities to the 0–255 grayscale range.</li>
+</ul></li>
+<li><p>White Matter Mask Generation: White-matter masks are derived from FreeSurfer7.4.10 mri_synthseg segmentations:</p>
+<ul>
+<li>Label 2 = Left cerebral white matter</li>
+<li>Label 41 = Right cerebral white matter These masks are refined with morphological hole-filling and used to constrain all segmentation steps to white matter only.</li>
+</ul></li>
+<li><p>Adaptive Thresholding and GMM Initialization</p>
+<p>A custom ASWMH2.5.6 module computes data-driven percentile thresholds from each scan’s FLAIR intensity histogram. This module analyzes the upper tail of the FLAIR brightness distribution, identifies subject-specific hyperintensity ranges and avoids single fixed cutoffs.</p>
+<p>These thresholds initialize a two-component Gaussian Mixture Model (GMM) within the white-matter mask. The two GMM components correspond to WMH-like high-intensity voxels and background / non-WMH white matter voxels. Posterior probabilities for each voxel are computed, forming the initial WMH probability map.</p></li>
+<li><p>Shape-Based Refinement</p>
+<p>To reduce false positives, ASWMH incorporates shape features (brightness ratio, elongation and sphericity). These features suppress vessels, noise spikes, and partial-volume artifacts.</p></li>
+<li><p>Edge-Based Refinement</p>
+<p>The Roberts edge detector (scikit-image <a href="https://scikit-image.org/docs/0.25.x/auto_examples/edges/plot_edge_filter.html" target="_blank">https://scikit-image.org/docs/0.25.x/auto_examples/edges/plot_edge_filter.html</a>) is applied in the axial plane to refine lesion boundaries. This step reduces spillover into cortex or CSF, sharpens lesion borders and eliminates peripheral distortions not removed by the WM mask alone. The result is a refined WMH probability map.</p></li>
+<li><p>Registration to MNI Space</p>
+<p>Following segmentation refinement, the standardized FLAIR image and corresponding WMH mask were registered to the MNI152 template using FSL/6.0.7.16 registration tools.</p></li>
+<li><p>Final WMH Volume Computation</p>
+<p>Final WMH volume (cm³) was computed by summing all voxels labeled as WMH and multiplying by the voxel volume (1 mm³). Regional and lobar WMH volumes (frontal, temporal, parietal, occipital) were extracted using FreeSurfer7.4.1’s mri_segstats, applied to the MNI-registered WMH mask and corresponding lobar anatomical labels.</p></li>
+</ul>
+</section>
+<section id="output-qc" class="level3" data-number="6.2.5">
+<h3 data-number="6.2.5" class="anchored" data-anchor-id="output-qc"><span class="header-section-number">6.2.5</span> Output QC</h3>
+<p>WMH output quality control was performed through visual inspection of the final segmentation overlays. ASWMH additionally generated HTML quality-assessment reports that display labeled and unlabeled FLAIR slices side-by-side, providing comprehensive snapshots of segmentation performance. Flagged cases underwent re-inspection and manual review.</p>
+</section>
+<section id="notes" class="level3" data-number="6.2.6">
+<h3 data-number="6.2.6" class="anchored" data-anchor-id="notes"><span class="header-section-number">6.2.6</span> Notes</h3>
+<ul>
+<li>All scans were processed within the same HPC environment used for the T1 analysis.</li>
+<li>All processing steps described above are summarized in the schematic workflow shown in the illustration below.</li>
+</ul>
+<p><img src="../../images/wmh_mri_pipeline.png" width="100%"></p>
+<p><strong>References</strong><span class="citation" data-cites="edwards2025alzheimer hoopes2022synthstrip billot2023synthseg rorden2024improving"><sup>[<a href="../../references.html#ref-edwards2025alzheimer" role="doc-biblioref"><strong>11</strong></a>–<a href="../../references.html#ref-rorden2024improving" role="doc-biblioref"><strong>14</strong></a>]</sup></span></p>
+</section>
+</section>
+<section id="diffusion-tensor-imaging-processing-using-freesurfers-dt_recon" class="level2" data-number="6.3">
+<h2 data-number="6.3" class="anchored" data-anchor-id="diffusion-tensor-imaging-processing-using-freesurfers-dt_recon"><span class="header-section-number">6.3</span> Diffusion Tensor Imaging Processing Using FreeSurfer’s dt_recon</h2>
+<section id="summary-2" class="level3" data-number="6.3.1">
+<h3 data-number="6.3.1" class="anchored" data-anchor-id="summary-2"><span class="header-section-number">6.3.1</span> Summary</h3>
+<p>ABC-DS diffusion-weighted MRI scans were processed using the FreeSurfer dt_recon pipeline (<a href="https://surfer.nmr.mgh.harvard.edu/fswiki/dt_recon">https://surfer.nmr.mgh.harvard.edu/fswiki/dt_recon</a>) to generate diffusion tensor maps, including fractional anisotropy (FA). Input data consisted of DICOM images from the ABC-DS dataset, organized through a standardized workflow and subjected to consistent raw-image and output QC within the shared HPC environment.</p>
+</section>
+<section id="data-acquisition-organization-2" class="level3" data-number="6.3.2">
+<h3 data-number="6.3.2" class="anchored" data-anchor-id="data-acquisition-organization-2"><span class="header-section-number">6.3.2</span> Data Acquisition &amp; Organization</h3>
+<ul>
+<li>DICOM Sorting: raw DICOM files were obtained from LONI. A centralized custom module in the Brickman Lab screened and parsed DICOM headers to extract:
+<ul>
+<li>Patient name and/or patient ID</li>
+<li>Series Description</li>
+<li>Scan Date (as reported in the DICOM header; note that LONI applies date shifting as part of de-identification</li>
+</ul></li>
+<li>Data were organized into subject_scandate directory structures and corresponding session-level folders to maintain consistency across all scans.
+<ul>
+<li>DICOM → NIfTI Conversion</li>
+<li>DTI/DWI DICOM files were converted to NIfTI using FreeSurfer’s mri_convert.</li>
+<li>Dcm2niix/1.0.20240202 was used as a fallback converter.</li>
+<li>NIfTI files served as the standardized inputs for all QC procedures and the FreeSurfer diffusion pipeline.</li>
+</ul></li>
+</ul>
+</section>
+<section id="quality-assessment-of-raw-dti-images" class="level3" data-number="6.3.3">
+<h3 data-number="6.3.3" class="anchored" data-anchor-id="quality-assessment-of-raw-dti-images"><span class="header-section-number">6.3.3</span> Quality Assessment of Raw DTI Images</h3>
+<ul>
+<li>Visual QC: a single trained reviewer visually inspected every DTI scan for:
+<ul>
+<li>Motion</li>
+<li>Slice dropout</li>
+<li>Distortions</li>
+<li>Signal loss</li>
+<li>General acquisition artifacts</li>
+</ul></li>
+<li>Motion, Eddy, and Susceptibility QC: processing followed a fixed sequence:
+<ul>
+<li>Denoising using Patch2Self <a href="https://pubmed.ncbi.nlm.nih.gov/36543265/">https://pubmed.ncbi.nlm.nih.gov/36543265/</a> applied to all scans as the first step after visual QC.</li>
+<li>Susceptibility Distortion Correction (if AP/PA DTI are available): For datasets containing opposing phase-encode (AP/PA) pairs, TOPUP (<a href="https://fsl.fmrib.ox.ac.uk/fsl/docs/diffusion/topup/index.html">https://fsl.fmrib.ox.ac.uk/fsl/docs/diffusion/topup/index.html</a>) was applied to correct susceptibility-induced distortions.</li>
+<li>Motion + Eddy Current Correction Completed through FreeSurfer’s dt_recon pipeline, which internally runs FSL’s eddy correction routines. No external standalone eddy processing was executed.</li>
+</ul></li>
+</ul>
+</section>
+<section id="freesurfer-dti-processing-pipeline" class="level3" data-number="6.3.4">
+<h3 data-number="6.3.4" class="anchored" data-anchor-id="freesurfer-dti-processing-pipeline"><span class="header-section-number">6.3.4</span> FreeSurfer DTI Processing Pipeline</h3>
+<ul>
+<li>Version &amp; References
+<ul>
+<li>FreeSurfer7.4.1 dt_recon <a href="https://surfer.nmr.mgh.harvard.edu/fswiki/dt_recon">https://surfer.nmr.mgh.harvard.edu/fswiki/dt_recon</a></li>
+<li>The method aligns diffusion data to the subject’s T1 FreeSurfer reconstruction directory, enabling surface-based and volumetric analyses.</li>
+</ul></li>
+<li>Pipeline Execution: dt_recon performs:
+<ul>
+<li>Motion and Eddy Correction (FSL-based)</li>
+<li>Tensor fitting.</li>
+<li>Registration of diffusion data to structural FreeSurfer space</li>
+<li>Generation of standard diffusion maps, including:
+<ul>
+<li>Fractional Anisotropy (FA)</li>
+<li>apparent diffusion coefficient (ADC)</li>
+<li>Radial Diffusivity (RD)</li>
+</ul></li>
+</ul></li>
+<li>dt_recon outputs DTI maps suitable for:
+<ul>
+<li>Voxelwise analysis</li>
+<li>ROI-based analysis</li>
+<li>Surface-based diffusion analyses</li>
+</ul></li>
+<li>Region of interest ROI analsysis
+<ul>
+<li>All FA maps were registered to standard space using FMRIB58 template.</li>
+<li>FreeSurfer mri_segstats was used to extract:
+<ul>
+<li>Regional and lobar FA metrics</li>
+</ul></li>
+<li>FA in major white-matter tracts was extracted using the JHU White Matter Atlas.</li>
+</ul></li>
+</ul>
+</section>
+<section id="quality-assessment-of-dti-outputs" class="level3" data-number="6.3.5">
+<h3 data-number="6.3.5" class="anchored" data-anchor-id="quality-assessment-of-dti-outputs"><span class="header-section-number">6.3.5</span> Quality Assessment of DTI Outputs</h3>
+<p>FA and other diffusion metrics were screened using z-score bands: −4, −3, −2, −1, 0, +1, +2, +3, +4. Any regional outliers were flagged for review and re-evaluation.</p>
+</section>
+<section id="notes-1" class="level3" data-number="6.3.6">
+<h3 data-number="6.3.6" class="anchored" data-anchor-id="notes-1"><span class="header-section-number">6.3.6</span> Notes</h3>
+<ul>
+<li>All scans were processed within the same HPC environment used for the T1 analysis.</li>
+<li>We did not report diffusivity (MD, AD, RD, ADC) measures because not all subjects had opposing phase-encode directions in the DTI acquisition. Upon visual inspection, cortical diffusivity appeared unreliable due to susceptibility artifacts. Therefore, we report only FA, as it is a more reliable measure in this dataset.</li>
+<li>Due to errors reported in the orientation of the ICBM-DTI-81 atlas and its white-matter labels, the authors used the JHU white-matter tract atlas from FSL tools box instead.</li>
+<li>All QC procedures (raw image QC and output QC) were performed by the same individual for methodological consistency.</li>
+</ul>
+<p><strong>References</strong><span class="citation" data-cites="rohlfing2013incorrect"><sup>[<a href="../../references.html#ref-rohlfing2013incorrect" role="doc-biblioref"><strong>15</strong></a>]</sup></span></p>
+<ul>
+<li><a href="https://surfer.nmr.mgh.harvard.edu/fswiki/dt_recon" target="_blank">https://surfer.nmr.mgh.harvard.edu/fswiki/dt_recon</a></li>
+<li><a href="https://surfer.nmr.mgh.harvard.edu/fswiki/FsTutorial/MultiModalDtiIndividual_tktools" target="_blank">https://surfer.nmr.mgh.harvard.edu/fswiki/FsTutorial/MultiModalDtiIndividual_tktools</a></li>
+<li><a href="https://surfer.nmr.mgh.harvard.edu/fswiki/FsTutorial/Diffusion/DTIscripts" target="_blank">https://surfer.nmr.mgh.harvard.edu/fswiki/FsTutorial/Diffusion/DTIscripts</a></li>
+</ul>
+</section>
+</section>
+<section id="asl-imaging-processing-for-cerebral-blood-flow-quantification" class="level2" data-number="6.4">
+<h2 data-number="6.4" class="anchored" data-anchor-id="asl-imaging-processing-for-cerebral-blood-flow-quantification"><span class="header-section-number">6.4</span> ASL Imaging Processing for Cerebral Blood Flow Quantification</h2>
+<section id="summary-3" class="level3" data-number="6.4.1">
+<h3 data-number="6.4.1" class="anchored" data-anchor-id="summary-3"><span class="header-section-number">6.4.1</span> Summary</h3>
+<p>Cerebral Blood Flow (CBF) represents the volume of blood delivered to brain tissue per unit time, expressed in ml/100g/min. ASL-derived CBF is a sensitive physiological marker relevant to Alzheimer’s disease research in Down syndrome. Prior studies show that individuals with Down syndrome who develop Alzheimer’s disease exhibit significantly reduced CBF, with stronger declines in individuals with greater cognitive impairment and a nonlinear age effect indicating faster reductions after ~45 years of age. In the ABC-DS cohort, both 3D pulsed ASL (pASL) and 3D pseudo-continuous ASL (pCASL) were used to quantify CBF across participants.</p>
+</section>
+<section id="mri-data-acquisition-organization" class="level3" data-number="6.4.2">
+<h3 data-number="6.4.2" class="anchored" data-anchor-id="mri-data-acquisition-organization"><span class="header-section-number">6.4.2</span> MRI Data Acquisition &amp; Organization</h3>
+<ul>
+<li>DICOM Sorting: raw DICOM files were obtained from LONI. A centralized custom module in the Brickman Lab screened and parsed DICOM headers to extract:
+<ul>
+<li>Patient name and/or patient ID</li>
+<li>Series Description</li>
+<li>Scan Date (as reported in the DICOM header; note that LONI applies date shifting as part of de-identification). Data were organized into subject_scandate directory structures and corresponding session-level folders to maintain consistency across all scans.</li>
+</ul></li>
+<li>DICOM → NIfTI Conversion
+<ul>
+<li>ASL DICOM files were converted to NIfTI using dcm2niix/1.0.20240202.</li>
+<li>NIfTI files served as the standardized inputs for all QC procedures.</li>
+</ul></li>
+<li>ASL Acquisition Protocols (ABCDS Study): ASL data in the ABC-DS cohort were acquired using two distinct protocols:
+<ul>
+<li>pASL Acquisition (Siemens Prisma)
+<ul>
+<li>TE = 16.02 ms</li>
+<li>TR = 5000 ms</li>
+<li>Flip angle = 180°</li>
+<li>Slice thickness = 4 mm</li>
+<li>Acquisition matrix = 448 × 448</li>
+<li>Data acquired in control–label pairs</li>
+</ul></li>
+<li>pCASL Acquisition (GE MR750)
+<ul>
+<li>TE = 10.528 ms</li>
+<li>TR = 4888 ms</li>
+<li>Inversion time (TI) = 2025 ms</li>
+<li>Flip angle = 111°</li>
+<li>Slice thickness = 4 mm</li>
+<li>Acquisition matrix = 128 × 128</li>
+<li>Includes M0 image (proton density) and PWI (perfusion-weighted image)</li>
+</ul></li>
+</ul></li>
+</ul>
+</section>
+<section id="quality-assessment" class="level3" data-number="6.4.3">
+<h3 data-number="6.4.3" class="anchored" data-anchor-id="quality-assessment"><span class="header-section-number">6.4.3</span> Quality Assessment</h3>
+<ul>
+<li>Visual QC: all ASL volumes were visually inspected for:
+<ul>
+<li>Motion artifacts</li>
+<li>Label–control misalignment</li>
+<li>Severe field inhomogeneity</li>
+</ul></li>
+<li>Motion QC &amp; Quantitative thresholds: For pASL data:
+<ul>
+<li>Motion correction: FSL/6.0.7.16’s tool mcflirt</li>
+<li>Outlier detection: FSL/6.0.7.16’s tool fsl_motion_outliers</li>
+<li>Quantitative exclusion thresholds (based on published literature) included SNR (GM/WM) ≤ –2.3 or ≥ 3.4 and mean framewise displacement &gt; 0.319. Volumes failing these criteria were excluded.</li>
+<li>All data is processed regardless of QC status. The subject was labeled as OK in the quality assessment report when visual inspection and quality metrics were acceptable, or labeled as POOR (recommend exclusion) when severe distortions were present that could affect the accuracy of quantitative CBF.</li>
+</ul></li>
+</ul>
+</section>
+<section id="asl-data-processing" class="level3" data-number="6.4.4">
+<h3 data-number="6.4.4" class="anchored" data-anchor-id="asl-data-processing"><span class="header-section-number">6.4.4</span> ASL Data Processing</h3>
+<ul>
+<li>Both pASL and pCASL datasets were processed using FSL/6.0.7.16’s oxford_asl, following the standardized quantification framework recommended in Alsop et al. (2015). Processing steps included:
+<ul>
+<li>Control–label matching (for pASL) using zig-zag pattern detection</li>
+<li>If the M0 image was missing, an estimated M0 was computed from the average of the control images.</li>
+</ul></li>
+<li>Registration to Structural T1: both pASL and pCASL CBF maps were registered to the participant’s T1-weighted anatomical scan using FreeSurfer bbregister (boundary-based registration) and masked using FreeSurfer brain masks to remove non-brain voxels.</li>
+<li>Regional and Lobar CBF Extraction: using FreeSurfer anatomical parcellations:
+<ul>
+<li>Desikan–Killiany atlas was applied to compute regional mean CBF values.</li>
+<li>Lobar summaries (frontal, temporal, parietal, occipital) were derived using the corresponding atlas definitions.</li>
+</ul></li>
+</ul>
+</section>
+<section id="notes-2" class="level3" data-number="6.4.5">
+<h3 data-number="6.4.5" class="anchored" data-anchor-id="notes-2"><span class="header-section-number">6.4.5</span> Notes</h3>
+<ul>
+<li>Both pASL and pCASL adhere to the ASL white paper Alsop et al.&nbsp;(2015) / ISMRM consensus guidelines.</li>
+<li>Quantification uses consistent physiological parameters across participants.</li>
+<li>All QC and processing were performed in a unified HPC environment, using the same tools across the dataset.</li>
+</ul>
+<p><strong>References</strong><span class="citation" data-cites="rohlfing2013incorrect chappell2008variational groves2009combined chappell2010separation chappell2011partial chappell2013comparing alsop2015recommended almeida2018test"><sup>[<a href="../../references.html#ref-rohlfing2013incorrect" role="doc-biblioref"><strong>15</strong></a>–<a href="../../references.html#ref-almeida2018test" role="doc-biblioref"><strong>22</strong></a>]</sup></span></p>
+</section>
+</section>
+<section id="small-vessel-disease-markers-enlarged-perivascular-spaces-infarcts-and-microbleeds" class="level2" data-number="6.5">
+<h2 data-number="6.5" class="anchored" data-anchor-id="small-vessel-disease-markers-enlarged-perivascular-spaces-infarcts-and-microbleeds"><span class="header-section-number">6.5</span> Small Vessel Disease Markers: Enlarged Perivascular Spaces, Infarcts, and Microbleeds</h2>
+<section id="enlarged-perivascular-spaces-and-infarcts" class="level3" data-number="6.5.1">
+<h3 data-number="6.5.1" class="anchored" data-anchor-id="enlarged-perivascular-spaces-and-infarcts"><span class="header-section-number">6.5.1</span> Enlarged Perivascular Spaces and Infarcts</h3>
+<ol type="1">
+<li><p><strong>Overview</strong>. We developed a lesion-classification algorithm based on anatomical location, T1 and T2 FLAIR signal characteristics, and lesion size to distinguish between enlarged perivascular spaces (PVS) and cavitated infarcts. PVS represent pathways for metabolic waste clearance that depend on vascular pulsatility. In adults with Down syndrome, enlarged PVS are consistently elevated across progressive Alzheimer’s disease (AD) diagnostic groups and emerge in the early 30s, predating amyloid and tau PET abnormalities. Cavitated infarcts may arise from embolic events, small-artery occlusions, or large-vessel disease. In adults with Down syndrome, infarcts also appear at young ages and increase with advancing AD stage.</p></li>
+<li><p><strong>Imaging Characteristics and Rating Procedure</strong>. PVS were first identified on T1-weighted MRI as sharply demarcated hypointense tubular or ovoid structures following the course of penetrating vessels. These findings were then cross-checked on T2 FLAIR: true PVS lack the hyperintense rim typical of infarcts. A visible hyperintense T2 FLAIR ring around a T1 hypointensity served as the primary criterion for labeling a lesion as a cavitated infarct. In regions where PVS are uncommon (e.g., brainstem, upper basal ganglia), the requirement for a FLAIR rim was relaxed. All images were reviewed in DICOM format using the RadiAnt viewer to ensure consistency in visualization.</p></li>
+<li><p><strong>Scoring and Quantification</strong>. Enlarged PVS were scored across 13 predefined brain regions, each rated from 0 to 2 based on severity. Regional scores were summed to generate a global PVS score ranging from 0 (none) to 26 (maximum severity). Infarcts were rated on T2 FLAIR as discrete hypointense cavities &gt; 5 mm with partial or complete hyperintense rims and confirmed on T1 as hypointense lesions. Due to a highly skewed distribution, infarcts were categorized simply as present or absent.</p></li>
+<li><p><strong>Acquisition Summary</strong>. T1-weighted scans were primarily acquired on a Siemens Prisma scanner with TR values between 6.8–2300 ms, TE values of 2.95–3.55 ms, inversion times (TI) of 400 or 900 ms, flip angles of 7°–11°, and slice thicknesses of 1.0–1.2 mm. FLAIR scans were acquired on the same platform with TR values of 4800 or 5000 ms, TE values of 110.8–441 ms, TI values between 1372–1800 ms, flip angles of 90° or 120°, and slice thicknesses of 0.9–1.2 mm.</p></li>
+</ol>
+</section>
+<section id="cerebral-microbleeds" class="level3" data-number="6.5.2">
+<h3 data-number="6.5.2" class="anchored" data-anchor-id="cerebral-microbleeds"><span class="header-section-number">6.5.2</span> Cerebral Microbleeds</h3>
+<ol type="1">
+<li><p><strong>Overview</strong>. Cerebral microbleeds (CMBs) are small foci of chronic blood product deposition and are closely associated with cerebral amyloid angiopathy (CAA) and Alzheimer’s disease pathology. In Down syndrome, CMBs increase in frequency across progressive AD diagnostic stages and typically appear in the mid-30s, coinciding with early parenchymal amyloid and tau abnormalities.</p></li>
+<li><p><strong>Imaging Acquisition</strong>. T2*-weighted sequences—including Gradient-Recalled Echo (GRE), Susceptibility-Weighted Imaging (SWI), and T2-star sequences—were used for microbleed detection. Most scans were acquired on a Siemens Prisma scanner with TR = 27–28 ms, TE = 6.7–20 ms, flip angle = 20°, and slice thickness = 1.5–4.0 mm.</p></li>
+<li><p><strong>Quality Assessment</strong>. An annual quality review was conducted to evaluate motion-related blurring, slice coverage, and overall image integrity. Raw DICOM data were converted to NIfTI format using Freesurfers’s mri_convert. Scans were excluded if:</p>
+<ul>
+<li>Motion artifacts substantially impaired visualization.</li>
+<li>Fewer than 50 axial slices were available (to ensure adequate brain coverage).</li>
+</ul>
+<p>Visual QC assessed sharpness, susceptibility artifacts, and contrast sufficient for detecting paramagnetic signal voids.</p></li>
+<li><p><strong>Microbleed Identification</strong>. CMBs were identified using Greenberg criteria, , as summarized in the table below, which define microbleeds as:</p>
+<ul>
+<li>Small, round or ovoid hypointense signal voids on T2*-weighted images</li>
+<li>Surrounded by brain parenchyma (not contiguous with vessels or bone)</li>
+<li>Demonstrating a blooming effect consistent with hemosiderin deposition</li>
+<li>Lacking hyperintense components on T2* (helping to distinguish them from cavernomas and other mimics)</li>
+<li>Paramagnetic substances such as calcifications or iron deposits were considered as possible mimics and excluded based on characteristic appearance.</li>
+</ul></li>
+</ol>
+<table id="csf-table" style="width: 75%; margin: 0 auto;">
+<thead>
+<tr>
+<th>
+Recommended Criteria for CMB Identification
+</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>
+<ol type="1">
+<li>Black on T2*-weighted MRI
+</li></ol></td>
+</tr>
+<tr>
+<td>
+<ol start="2" type="1">
+<li>Round or ovoid (rather than linear)
+</li></ol></td>
+</tr>
+<tr>
+<td>
+<ol start="3" type="1">
+<li>Blooming on T2*-weighted MRI
+</li></ol></td>
+</tr>
+<tr>
+<td>
+<ol start="4" type="1">
+<li>Devoid of signal hyperintensity on T1- or T2-weighted sequences
+</li></ol></td>
+</tr>
+<tr>
+<td>
+<ol start="5" type="1">
+<li>At least half surrounded by brain parenchyma
+</li></ol></td>
+</tr>
+<tr>
+<td>
+<ol start="6" type="1">
+<li>Distinct from other potential mimics such as iron/calcium deposits, bone, or vessel flow voids
+</li></ol></td>
+</tr>
+<tr>
+<td>
+<ol start="7" type="1">
+<li>Clinical history excluding traumatic diffuse axonal injury
+</li></ol></td>
+</tr>
+</tbody></table>
+
+
+
+
+
+
+
+<p><br></p>
+<ol start="5" type="1">
+<li><strong>Scoring and Quantification</strong>. Because the distribution of CMBs was highly skewed, most participants having either none or a single lesion, microbleeds were recorded as present or absent at the whole-brain level. Regional assessments were performed across the frontal, temporal, parietal, and occipital lobes, as well as the basal ganglia, brainstem, and cerebellum. Total CMB counts were then documented for each participant.</li>
+</ol>
+<p><strong>References</strong><span class="citation" data-cites="chesebro2021automated lao2020alzheimer lao2024cerebrovascular ramirez2016imaging zhu2010severity"><sup>[<a href="../../references.html#ref-chesebro2021automated" role="doc-biblioref"><strong>23</strong></a>–<a href="../../references.html#ref-zhu2010severity" role="doc-biblioref"><strong>27</strong></a>]</sup></span></p>
+<hr>
+<p><strong>Computing Environment</strong></p>
+<ul>
+<li>System
+<ul>
+<li>OS: Debian GNU/Linux 12 (bookworm)</li>
+<li>Kernel: Linux 6.1.0-28-amd64</li>
+<li>Architecture: x86-64</li>
+<li>Hostname: brickmanlogin</li>
+</ul></li>
+<li>Hardware
+<ul>
+<li>Server: Supermicro SYS-1028R-WTNRT</li>
+<li>Firmware: v3.1c</li>
+<li>Platform: Columbia University / Brickman Lab/ HPC</li>
+</ul></li>
+<li>Build Information
+<ul>
+<li>Build Date: Nov 22, 2024</li>
+<li>Debian build: 6.1.119-1</li>
+</ul></li>
+</ul>
+<p><strong>Authors</strong>. This document was prepared by Dr.&nbsp;Alshikho and Dr.&nbsp;Brickman from Columbia University, together with Dr.&nbsp;Christian from the Waisman Center at the University of Wisconsin. For more information, please contact Dr.&nbsp;Brickman at <a href="mailto:amb2139@cumc.columbia.edu">amb2139@cumc.columbia.edu</a> or Dr. Christian at <a href="mailto:bchristian@wisc.edu">bchristian@wisc.edu</a>.</p>
+
+
+<div id="refs" class="references csl-bib-body hanging-indent" role="list" style="display: none">
+<div id="ref-collins1994automatic" class="csl-entry" role="listitem">
+1. Collins DL, Neelin P, Peters TM, Evans AC. Automatic 3D intersubject registration of MR volumetric data in standardized talairach space. <em>Journal of computer assisted tomography</em>. 1994;18(2):192-205. <a href="https://www.ncbi.nlm.nih.gov/pubmed/8126267">https://www.ncbi.nlm.nih.gov/pubmed/8126267</a>
+</div>
+<div id="ref-dale1999cortical" class="csl-entry" role="listitem">
+2. Dale AM, Fischl B, Sereno MI. Cortical surface-based analysis. I. Segmentation and surface reconstruction. <em>NeuroImage</em>. 1999;9(2):179-194. doi:<a href="https://doi.org/10.1006/nimg.1998.0395">10.1006/nimg.1998.0395</a>
+</div>
+<div id="ref-fischl1999cortical" class="csl-entry" role="listitem">
+3. Fischl B, Sereno MI, Dale AM. Cortical surface-based analysis. II: Inflation, flattening, and a surface-based coordinate system. <em>NeuroImage</em>. 1999;9(2):195-207. doi:<a href="https://doi.org/10.1006/nimg.1998.0396">10.1006/nimg.1998.0396</a>
+</div>
+<div id="ref-fischl1999high" class="csl-entry" role="listitem">
+4. Fischl B, Sereno MI, Tootell RB, Dale AM. High-resolution intersubject averaging and a coordinate system for the cortical surface. <em>Human brain mapping</em>. 1999;8(4):272-284. doi:<a href="https://doi.org/10.1002/(sici)1097-0193(1999)8:4<272::aid-hbm10>3.0.co;2-4">10.1002/(sici)1097-0193(1999)8:4&lt;272::aid-hbm10&gt;3.0.co;2-4</a>
+</div>
+<div id="ref-fischl2000measuring" class="csl-entry" role="listitem">
+5. Fischl B, Dale AM. Measuring the thickness of the human cerebral cortex from magnetic resonance images. <em>Proceedings of the National Academy of Sciences of the United States of America</em>. 2000;97(20):11050-11055. doi:<a href="https://doi.org/10.1073/pnas.200033797">10.1073/pnas.200033797</a>
+</div>
+<div id="ref-fischl2001automated" class="csl-entry" role="listitem">
+6. Fischl B, Liu A, Dale AM. Automated manifold surgery: Constructing geometrically accurate and topologically correct models of the human cerebral cortex. <em>IEEE transactions on medical imaging</em>. 2001;20(1):70-80. doi:<a href="https://doi.org/10.1109/42.906426">10.1109/42.906426</a>
+</div>
+<div id="ref-n3_nonuniform_intensity_correction" class="csl-entry" role="listitem">
+7. McConnell Brain Imaging Centre. Non-uniform intensity correction. Published online n.d. <a href="http://www.bic.mni.mcgill.ca/software/N3/node6.html">http://www.bic.mni.mcgill.ca/software/N3/node6.html</a>
+</div>
+<div id="ref-fischl2002whole" class="csl-entry" role="listitem">
+8. <span class="nocase">Fischl B, Salat DH, Busa E, et al.</span> Whole brain segmentation: Automated labeling of neuroanatomical structures in the human brain. <em>Neuron</em>. 2002;33(3):341-355. doi:<a href="https://doi.org/10.1016/s0896-6273(02)00569-x">10.1016/s0896-6273(02)00569-x</a>
+</div>
+<div id="ref-fischl2004automatically" class="csl-entry" role="listitem">
+9. <span class="nocase">Fischl B, van der Kouwe A, Destrieux C, et al.</span> Automatically parcellating the human cerebral cortex. <em>Cerebral cortex (New York, NY : 1991)</em>. 2004;14(1):11-22. doi:<a href="https://doi.org/10.1093/cercor/bhg087">10.1093/cercor/bhg087</a>
+</div>
+<div id="ref-reuter2011avoiding" class="csl-entry" role="listitem">
+10. Reuter M, Fischl B. Avoiding asymmetry-induced bias in longitudinal image processing. <em>NeuroImage</em>. 2011;57(1):19-21. doi:<a href="https://doi.org/10.1016/j.neuroimage.2011.02.076">10.1016/j.neuroimage.2011.02.076</a>
+</div>
+<div id="ref-edwards2025alzheimer" class="csl-entry" role="listitem">
+11. Edwards NC, Lao P, Alshikho MJ, et al. Alzheimer disease, vascular disease, and blood-brain barrier permeability biomarkers in middle-aged adults. <em>Neurology</em>. 2025;105(9):e214220. doi:<a href="https://doi.org/10.1212/WNL.0000000000214220">10.1212/WNL.0000000000214220</a>
+</div>
+<div id="ref-hoopes2022synthstrip" class="csl-entry" role="listitem">
+12. Hoopes A, Mora JS, Dalca AV, Fischl B, Hoffmann M. SynthStrip: Skull-stripping for any brain image. <em>NeuroImage</em>. 2022;260:119474. doi:<a href="https://doi.org/10.1016/j.neuroimage.2022.119474">10.1016/j.neuroimage.2022.119474</a>
+</div>
+<div id="ref-billot2023synthseg" class="csl-entry" role="listitem">
+13. Billot B, Greve DN, Puonti O, et al. SynthSeg: Segmentation of brain MRI scans of any contrast and resolution without retraining. <em>Medical image analysis</em>. 2023;86:102789. doi:<a href="https://doi.org/10.1016/j.media.2023.102789">10.1016/j.media.2023.102789</a>
+</div>
+<div id="ref-rorden2024improving" class="csl-entry" role="listitem">
+14. Rorden C, Hanayik T, Glen DR, et al. Improving 3D edge detection for visual inspection of MRI coregistration and alignment. <em>Journal of neuroscience methods</em>. 2024;406:110112. doi:<a href="https://doi.org/10.1016/j.jneumeth.2024.110112">10.1016/j.jneumeth.2024.110112</a>
+</div>
+<div id="ref-rohlfing2013incorrect" class="csl-entry" role="listitem">
+15. Rohlfing T. Incorrect ICBM-DTI-81 atlas orientation and white matter labels. <em>Frontiers in neuroscience</em>. 2013;7:4. doi:<a href="https://doi.org/10.3389/fnins.2013.00004">10.3389/fnins.2013.00004</a>
+</div>
+<div id="ref-chappell2008variational" class="csl-entry" role="listitem">
+16. Chappell MA, Groves AR, Whitcher B, Woolrich MW. Variational bayesian inference for a nonlinear forward model. <em>IEEE Transactions on Signal Processing</em>. 2008;57(1):223-236.
+</div>
+<div id="ref-groves2009combined" class="csl-entry" role="listitem">
+17. Groves AR, Chappell MA, Woolrich MW. Combined spatial and non-spatial prior for inference on MRI time-series. <em>NeuroImage</em>. 2009;45(3):795-809. doi:<a href="https://doi.org/10.1016/j.neuroimage.2008.12.027">10.1016/j.neuroimage.2008.12.027</a>
+</div>
+<div id="ref-chappell2010separation" class="csl-entry" role="listitem">
+18. Chappell MA, MacIntosh BJ, Donahue MJ, Günther M, Jezzard P, Woolrich MW. Separation of macrovascular signal in multi-inversion time arterial spin labelling MRI. <em>Magnetic resonance in medicine</em>. 2010;63(5):1357-1365. doi:<a href="https://doi.org/10.1002/mrm.22320">10.1002/mrm.22320</a>
+</div>
+<div id="ref-chappell2011partial" class="csl-entry" role="listitem">
+19. Chappell MA, Groves AR, MacIntosh BJ, Donahue MJ, Jezzard P, Woolrich MW. Partial volume correction of multiple inversion time arterial spin labeling MRI data. <em>Magnetic resonance in medicine</em>. 2011;65(4):1173-1183. doi:<a href="https://doi.org/10.1002/mrm.22641">10.1002/mrm.22641</a>
+</div>
+<div id="ref-chappell2013comparing" class="csl-entry" role="listitem">
+20. Chappell MA, Woolrich MW, Petersen ET, Golay X, Payne SJ. Comparing model-based and model-free analysis methods for QUASAR arterial spin labeling perfusion quantification. <em>Magnetic resonance in medicine</em>. 2013;69(5):1466-1475. doi:<a href="https://doi.org/10.1002/mrm.24372">10.1002/mrm.24372</a>
+</div>
+<div id="ref-alsop2015recommended" class="csl-entry" role="listitem">
+21. <span class="nocase">Alsop DC, Detre JA, Golay X, et al.</span> Recommended implementation of arterial spin-labeled perfusion MRI for clinical applications: A consensus of the ISMRM perfusion study group and the european consortium for ASL in dementia. <em>Magnetic resonance in medicine</em>. 2015;73(1):102-116. doi:<a href="https://doi.org/10.1002/mrm.25197">10.1002/mrm.25197</a>
+</div>
+<div id="ref-almeida2018test" class="csl-entry" role="listitem">
+22. Almeida JRC, Greenberg T, Lu H, et al. Test-retest reliability of cerebral blood flow in healthy individuals using arterial spin labeling: Findings from the EMBARC study. <em>Magnetic resonance imaging</em>. 2018;45:26-33. doi:<a href="https://doi.org/10.1016/j.mri.2017.09.004">10.1016/j.mri.2017.09.004</a>
+</div>
+<div id="ref-chesebro2021automated" class="csl-entry" role="listitem">
+23. Chesebro AG, Amarante E, Lao PJ, Meier IB, Mayeux R, Brickman AM. Automated detection of cerebral microbleeds on T2*-weighted MRI. <em>Scientific reports</em>. 2021;11(1):4004. doi:<a href="https://doi.org/10.1038/s41598-021-83607-0">10.1038/s41598-021-83607-0</a>
+</div>
+<div id="ref-lao2020alzheimer" class="csl-entry" role="listitem">
+24. Lao PJ, Gutierrez J, Keator D, et al. Alzheimer-related cerebrovascular disease in down syndrome. <em>Annals of neurology</em>. 2020;88(6):1165-1177. doi:<a href="https://doi.org/10.1002/ana.25905">10.1002/ana.25905</a>
+</div>
+<div id="ref-lao2024cerebrovascular" class="csl-entry" role="listitem">
+25. Lao P, Edwards N, Flores-Aguilar L, et al. Cerebrovascular disease emerges with age and alzheimer’s disease in adults with down syndrome. <em>Scientific reports</em>. 2024;14(1):12334. doi:<a href="https://doi.org/10.1038/s41598-024-61962-y">10.1038/s41598-024-61962-y</a>
+</div>
+<div id="ref-ramirez2016imaging" class="csl-entry" role="listitem">
+26. Ramirez J, Berezuk C, McNeely AA, Gao F, McLaurin J, Black SE. Imaging the perivascular space as a potential biomarker of neurovascular and neurodegenerative diseases. <em>Cellular and molecular neurobiology</em>. 2016;36(2):289-299. doi:<a href="https://doi.org/10.1007/s10571-016-0343-6">10.1007/s10571-016-0343-6</a>
+</div>
+<div id="ref-zhu2010severity" class="csl-entry" role="listitem">
+27. Zhu YC, Tzourio C, Soumaré A, Mazoyer B, Dufouil C, Chabriat H. Severity of dilated virchow-robin spaces is associated with age, blood pressure, and MRI markers of small vessel disease: A population-based study. <em>Stroke</em>. 2010;41(11):2483-2490. doi:<a href="https://doi.org/10.1161/STROKEAHA.110.591586">10.1161/STROKEAHA.110.591586</a>
+</div>
+</div>
+</section>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp('/' + window.location.host + '/');
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="../../methods/metabolomics.html" class="pagination-link" aria-label="Metabolomics">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Metabolomics</span></span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="../../methods/pnt1.html" class="pagination-link" aria-label="Plasma NT1-tau in ABC-DS">
+        <span class="nav-page-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Plasma NT1-tau in ABC-DS</span></span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
+</div> <!-- /content -->
+
+
+
+
+</body></html>
